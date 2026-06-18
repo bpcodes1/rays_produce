@@ -246,6 +246,53 @@
   font-size: 16px;
 }
 
+/* ── Simple sidebar (homepage) ── */
+.simple-area-list {
+  border: 1px solid #c8d8bc;
+  margin-bottom: 0;
+}
+
+.simple-area-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background-color: #f0f5eb;
+  text-decoration: none;
+  border-bottom: 1px solid #c8d8bc;
+  transition: background-color 0.12s ease;
+}
+
+.simple-area-item:last-child {
+  border-bottom: none;
+}
+
+.simple-area-item:hover {
+  background-color: #e4eede;
+}
+
+.simple-area-item--hq {
+  background-color: #eaf4e0;
+}
+
+.simple-area-item--hq:hover {
+  background-color: #ddeecf;
+}
+
+.simple-area-name {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #2d5015;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.simple-area-arrow {
+  color: #5a8c2a;
+  font-size: 16px;
+}
+
 /* ── Bottom callout ── */
 .area-foot {
   display: flex;

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   ComposableMap,
   Geographies,
@@ -19,12 +20,13 @@ interface CityService {
 interface City {
   name: string
   state: string
-  coords?: [number, number]  // only needed for cities shown as map markers
+  coords?: [number, number]
   hq?: boolean
   anchor?: 'start' | 'middle' | 'end'
   dx?: number
   dy?: number
   services?: CityService[]
+  pinOnly?: boolean  // dot only, no label
 }
 
 interface AreaGroup {
@@ -47,16 +49,16 @@ const AREAS: AreaGroup[] = [
         dx: -8,
         dy: -8,
       },
-      { name: 'Keizer',       state: 'OR' },
-      { name: 'Woodburn',     state: 'OR' },
-      { name: 'Albany',       state: 'OR' },
-      { name: 'Corvallis',    state: 'OR' },
-      { name: 'Lebanon',      state: 'OR' },
-      { name: 'Independence', state: 'OR' },
-      { name: 'Monmouth',     state: 'OR' },
-      { name: 'Stayton',      state: 'OR' },
-      { name: 'Dallas',       state: 'OR' },
-      { name: 'Brooks',       state: 'OR' },
+      { name: 'Keizer',       state: 'OR', coords: [-123.0263, 44.9990], pinOnly: true },
+      { name: 'Woodburn',     state: 'OR', coords: [-122.8540, 45.1543], pinOnly: true },
+      { name: 'Albany',       state: 'OR', coords: [-123.1058, 44.6365], pinOnly: true },
+      { name: 'Corvallis',    state: 'OR', coords: [-123.2620, 44.5646], pinOnly: true },
+      { name: 'Lebanon',      state: 'OR', coords: [-122.9079, 44.5360], pinOnly: true },
+      { name: 'Independence', state: 'OR', coords: [-123.1854, 44.8540], pinOnly: true },
+      { name: 'Monmouth',     state: 'OR', coords: [-123.2318, 44.8493], pinOnly: true },
+      { name: 'Stayton',      state: 'OR', coords: [-122.7940, 44.8015], pinOnly: true },
+      { name: 'Dallas',       state: 'OR', coords: [-123.3165, 44.9193], pinOnly: true },
+      { name: 'Brooks',       state: 'OR', coords: [-122.9654, 45.0726], pinOnly: true },
     ],
   },
   {
@@ -83,15 +85,15 @@ const AREAS: AreaGroup[] = [
         dx: 8,
         dy: 4,
       },
-      { name: 'Beaverton',  state: 'OR' },
-      { name: 'Hillsboro',  state: 'OR' },
-      { name: 'Tigard',     state: 'OR' },
-      { name: 'Aloha',      state: 'OR' },
-      { name: 'Cornelius',  state: 'OR' },
-      { name: 'Tualatin',   state: 'OR' },
-      { name: 'Canby',      state: 'OR' },
-      { name: 'McMinnville', state: 'OR' },
-      { name: 'Hubbard',    state: 'OR' },
+      { name: 'Beaverton',   state: 'OR', coords: [-122.8068, 45.4871], pinOnly: true },
+      { name: 'Hillsboro',   state: 'OR', coords: [-122.9898, 45.5229], pinOnly: true },
+      { name: 'Tigard',      state: 'OR', coords: [-122.7715, 45.4312], pinOnly: true },
+      { name: 'Aloha',       state: 'OR', coords: [-122.8679, 45.4929], pinOnly: true },
+      { name: 'Cornelius',   state: 'OR', coords: [-123.0579, 45.5218], pinOnly: true },
+      { name: 'Tualatin',    state: 'OR', coords: [-122.7623, 45.3840], pinOnly: true },
+      { name: 'Canby',       state: 'OR', coords: [-122.6929, 45.2629], pinOnly: true },
+      { name: 'McMinnville', state: 'OR', coords: [-123.1985, 45.2101], pinOnly: true },
+      { name: 'Hubbard',     state: 'OR', coords: [-122.7979, 45.1843], pinOnly: true },
     ],
   },
   {
@@ -108,11 +110,11 @@ const AREAS: AreaGroup[] = [
           { label: 'Fresh Delivery', href: '/eugene/delivery' },
         ],
       },
-      { name: 'Springfield',    state: 'OR' },
-      { name: 'Junction City',  state: 'OR' },
-      { name: 'Cottage Grove',  state: 'OR' },
-      { name: 'Florence',       state: 'OR' },
-      { name: 'Coos Bay',       state: 'OR' },
+      { name: 'Springfield',   state: 'OR', coords: [-122.9057, 44.0462], pinOnly: true },
+      { name: 'Junction City', state: 'OR', coords: [-123.2096, 44.2165], pinOnly: true },
+      { name: 'Cottage Grove', state: 'OR', coords: [-123.0593, 43.7993], pinOnly: true },
+      { name: 'Florence',      state: 'OR', coords: [-124.1012, 43.9818], pinOnly: true },
+      { name: 'Coos Bay',      state: 'OR', coords: [-124.2179, 43.3665], pinOnly: true },
     ],
   },
   {
@@ -126,14 +128,14 @@ const AREAS: AreaGroup[] = [
         dx: -8,
         dy: 4,
       },
-      { name: 'Warrenton',    state: 'OR' },
-      { name: 'Hood River',   state: 'OR' },
-      { name: 'The Dalles',   state: 'OR' },
-      { name: 'Boardman',     state: 'OR' },
-      { name: 'Hermiston',    state: 'OR' },
-      { name: 'Irrigon',      state: 'OR' },
-      { name: 'Umatilla',     state: 'OR' },
-      { name: 'Brownsville',  state: 'OR' },
+      { name: 'Warrenton',   state: 'OR', coords: [-123.9251, 46.1651], pinOnly: true },
+      { name: 'Hood River',  state: 'OR', coords: [-121.5218, 45.7071], pinOnly: true },
+      { name: 'The Dalles',  state: 'OR', coords: [-121.1787, 45.5946], pinOnly: true },
+      { name: 'Boardman',    state: 'OR', coords: [-119.6968, 45.8393], pinOnly: true },
+      { name: 'Hermiston',   state: 'OR', coords: [-119.2887, 45.8407], pinOnly: true },
+      { name: 'Irrigon',     state: 'OR', coords: [-119.4804, 45.8946], pinOnly: true },
+      { name: 'Umatilla',    state: 'OR', coords: [-119.3465, 45.9160], pinOnly: true },
+      { name: 'Brownsville', state: 'OR', coords: [-122.9879, 44.3960], pinOnly: true },
     ],
   },
   {
@@ -147,9 +149,9 @@ const AREAS: AreaGroup[] = [
         dx: 8,
         dy: 4,
       },
-      { name: 'Redmond',        state: 'OR' },
-      { name: 'Madras',         state: 'OR' },
-      { name: 'Prineville Area', state: 'OR' },
+      { name: 'Redmond',         state: 'OR', coords: [-121.1490, 44.2726], pinOnly: true },
+      { name: 'Madras',          state: 'OR', coords: [-121.1296, 44.6332], pinOnly: true },
+      { name: 'Prineville Area', state: 'OR', coords: [-120.8340, 44.2996], pinOnly: true },
     ],
   },
   {
@@ -163,11 +165,11 @@ const AREAS: AreaGroup[] = [
         dx: 8,
         dy: 4,
       },
-      { name: 'Grants Pass',   state: 'OR' },
-      { name: 'Roseburg',      state: 'OR' },
-      { name: 'Ashland',       state: 'OR' },
-      { name: 'Klamath Falls', state: 'OR' },
-      { name: 'Merrill',       state: 'OR' },
+      { name: 'Grants Pass',   state: 'OR', coords: [-123.3284, 42.4393], pinOnly: true },
+      { name: 'Roseburg',      state: 'OR', coords: [-123.3507, 43.2165], pinOnly: true },
+      { name: 'Ashland',       state: 'OR', coords: [-122.7098, 42.1946], pinOnly: true },
+      { name: 'Klamath Falls', state: 'OR', coords: [-121.7817, 42.2249], pinOnly: true },
+      { name: 'Merrill',       state: 'OR', coords: [-121.5999, 42.0235], pinOnly: true },
     ],
   },
   {
@@ -181,10 +183,10 @@ const AREAS: AreaGroup[] = [
         dx: 8,
         dy: 4,
       },
-      { name: 'Camas',        state: 'WA' },
-      { name: 'Woodland',     state: 'WA' },
-      { name: 'Battle Ground', state: 'WA' },
-      { name: 'Long Beach',   state: 'WA' },
+      { name: 'Camas',        state: 'WA', coords: [-122.3990, 45.5871], pinOnly: true },
+      { name: 'Woodland',     state: 'WA', coords: [-122.7437, 45.9054], pinOnly: true },
+      { name: 'Battle Ground', state: 'WA', coords: [-122.5329, 45.7821], pinOnly: true },
+      { name: 'Long Beach',   state: 'WA', coords: [-124.0529, 46.3540], pinOnly: true },
     ],
   },
   {
@@ -210,17 +212,17 @@ const AREAS: AreaGroup[] = [
           { label: 'Wholesale', href: '/seattle/wholesale' },
         ],
       },
-      { name: 'Renton',            state: 'WA' },
-      { name: 'Des Moines',        state: 'WA' },
-      { name: 'Issaquah',          state: 'WA' },
-      { name: 'Olympia',           state: 'WA' },
-      { name: 'Puyallup',          state: 'WA' },
-      { name: 'Bonney Lake',       state: 'WA' },
-      { name: 'Graham',            state: 'WA' },
-      { name: 'Mountlake Terrace', state: 'WA' },
-      { name: 'Marysville',        state: 'WA' },
-      { name: 'Tukwila',           state: 'WA' },
-      { name: 'Bellingham',        state: 'WA' },
+      { name: 'Renton',            state: 'WA', coords: [-122.2015, 47.4829], pinOnly: true },
+      { name: 'Des Moines',        state: 'WA', coords: [-122.3246, 47.4015], pinOnly: true },
+      { name: 'Issaquah',          state: 'WA', coords: [-122.0326, 47.5301], pinOnly: true },
+      { name: 'Olympia',           state: 'WA', coords: [-122.9007, 47.0379], pinOnly: true },
+      { name: 'Puyallup',          state: 'WA', coords: [-122.2929, 47.1854], pinOnly: true },
+      { name: 'Bonney Lake',       state: 'WA', coords: [-122.1776, 47.1776], pinOnly: true },
+      { name: 'Graham',            state: 'WA', coords: [-122.2929, 47.0499], pinOnly: true },
+      { name: 'Mountlake Terrace', state: 'WA', coords: [-122.3132, 47.7882], pinOnly: true },
+      { name: 'Marysville',        state: 'WA', coords: [-122.1771, 48.0515], pinOnly: true },
+      { name: 'Tukwila',           state: 'WA', coords: [-122.2607, 47.4740], pinOnly: true },
+      { name: 'Bellingham',        state: 'WA', coords: [-122.4787, 48.7596], pinOnly: true },
     ],
   },
   {
@@ -234,7 +236,7 @@ const AREAS: AreaGroup[] = [
         dx: 8,
         dy: -8,
       },
-      { name: 'Spokane Valley', state: 'WA' },
+      { name: 'Spokane Valley', state: 'WA', coords: [-117.2398, 47.6732], pinOnly: true },
       {
         name: 'Yakima',
         state: 'WA',
@@ -243,25 +245,31 @@ const AREAS: AreaGroup[] = [
         dx: 8,
         dy: 4,
       },
-      { name: 'Wapato',      state: 'WA' },
-      { name: 'Sunnyside',   state: 'WA' },
-      { name: 'Grandview',   state: 'WA' },
-      { name: 'Pasco',       state: 'WA' },
-      { name: 'Kennewick',   state: 'WA' },
-      { name: 'Richland',    state: 'WA' },
-      { name: 'Prosser',     state: 'WA' },
-      { name: 'Toppenish',   state: 'WA' },
-      { name: 'Union Gap',   state: 'WA' },
-      { name: 'Benton City', state: 'WA' },
-      { name: 'Walla Walla', state: 'WA' },
+      { name: 'Wapato',      state: 'WA', coords: [-120.4204, 46.4482], pinOnly: true },
+      { name: 'Sunnyside',   state: 'WA', coords: [-119.9079, 46.3240], pinOnly: true },
+      { name: 'Grandview',   state: 'WA', coords: [-119.9043, 46.2565], pinOnly: true },
+      { name: 'Pasco',       state: 'WA', coords: [-119.1005, 46.2393], pinOnly: true },
+      { name: 'Kennewick',   state: 'WA', coords: [-119.1372, 46.2112], pinOnly: true },
+      { name: 'Richland',    state: 'WA', coords: [-119.2843, 46.2860], pinOnly: true },
+      { name: 'Prosser',     state: 'WA', coords: [-119.7668, 46.2057], pinOnly: true },
+      { name: 'Toppenish',   state: 'WA', coords: [-120.3129, 46.3776], pinOnly: true },
+      { name: 'Union Gap',   state: 'WA', coords: [-120.4865, 46.5529], pinOnly: true },
+      { name: 'Benton City', state: 'WA', coords: [-119.4876, 46.2629], pinOnly: true },
+      { name: 'Walla Walla', state: 'WA', coords: [-118.3435, 46.0651], pinOnly: true },
     ],
   },
 ]
 
-// Only cities with coords get map markers
-const MAP_CITIES = AREAS.flatMap(a => a.cities).filter(c => c.coords != null)
+const LABELED_CITIES  = AREAS.flatMap(a => a.cities).filter(c => c.coords != null && !c.pinOnly)
+const PIN_ONLY_CITIES = AREAS.flatMap(a => a.cities).filter(c => c.coords != null && c.pinOnly === true)
 
-export default function ServiceMap() {
+interface ServiceMapProps {
+  showAllPins?: boolean
+  footerCta?: { label: string; to: string }
+  simpleSidebar?: boolean
+}
+
+export default function ServiceMap({ showAllPins = false, footerCta, simpleSidebar = false }: ServiceMapProps) {
   const [expandedArea, setExpandedArea] = useState<string | null>(null)
   const [selectedCity, setSelectedCity] = useState<string | null>(null)
 
@@ -326,7 +334,20 @@ export default function ServiceMap() {
               }
             </Geographies>
 
-            {MAP_CITIES.map(city => (
+            {/* Unnamed pins — service areas page only */}
+            {showAllPins && PIN_ONLY_CITIES.map(city => (
+              <Marker key={`pin-${city.name}`} coordinates={city.coords!}>
+                <circle
+                  r={2.5}
+                  fill="#3d6b1e"
+                  stroke="#ffffff"
+                  strokeWidth={1}
+                />
+              </Marker>
+            ))}
+
+            {/* Named labeled pins — always shown */}
+            {LABELED_CITIES.map(city => (
               <Marker key={city.name} coordinates={city.coords!}>
                 <circle
                   r={city.hq ? 6 : 3.5}
@@ -364,8 +385,29 @@ export default function ServiceMap() {
           </ComposableMap>
         </div>
 
-        {/* Right column: area accordion + panel + foot */}
+        {/* Right column */}
         <div className="areas-right">
+
+          {simpleSidebar ? (
+            <div className="simple-area-list">
+              <Link to="/service-areas" className="simple-area-item simple-area-item--hq">
+                <span className="simple-area-name">
+                  <span className="area-hq-star" aria-label="Headquarters">★</span>
+                  Salem, OR
+                </span>
+                <span className="simple-area-arrow">→</span>
+              </Link>
+              <Link to="/service-areas" className="simple-area-item">
+                <span className="simple-area-name">Oregon</span>
+                <span className="simple-area-arrow">→</span>
+              </Link>
+              <Link to="/service-areas" className="simple-area-item">
+                <span className="simple-area-name">Washington</span>
+                <span className="simple-area-arrow">→</span>
+              </Link>
+            </div>
+          ) : (
+          <>
           <div className="area-groups">
             {AREAS.map(area => {
               const isOpen = expandedArea === area.name
@@ -446,12 +488,17 @@ export default function ServiceMap() {
               ))}
             </div>
           )}
+          </>
+          )}
 
           <div className="area-foot">
             <p>
               Don't see your city? Fill out the form — we may still be able to serve your location.
             </p>
-            <a href="#quote" className="cta-button">Get a Quote</a>
+            {footerCta
+              ? <Link to={footerCta.to} className="cta-button">{footerCta.label}</Link>
+              : <a href="#quote" className="cta-button">Get a Quote</a>
+            }
           </div>
         </div>
       </div>

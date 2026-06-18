@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ServicesPage from './pages/ServicesPage'
 import ContactPage from './pages/ContactPage'
+import ServiceAreasPage from './pages/ServiceAreasPage'
 import './App.css'
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
         <Navbar />
         <main>
           <Routes>
-            <Route path="/"        element={<HomePage />} />
-            <Route path="/about"   element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/"               element={<HomePage />} />
+            <Route path="/about"          element={<AboutPage />} />
+            <Route path="/services"       element={<ServicesPage />} />
+            <Route path="/contact"        element={<ContactPage />} />
+            <Route path="/service-areas"  element={<ServiceAreasPage />} />
           </Routes>
         </main>
         <Footer />

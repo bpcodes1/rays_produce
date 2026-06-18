@@ -4,7 +4,7 @@ import './Navbar.css'
 
 const NAV_LINKS = [
   { label: 'Services',      to: '/services' },
-  { label: 'Service Areas', to: '/contact#service-areas' },
+  { label: 'Service Areas', to: '/service-areas' },
   { label: 'About',         to: '/about' },
   { label: 'Contact',       to: '/contact' },
 ]

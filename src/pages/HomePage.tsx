@@ -107,7 +107,7 @@ export default function HomePage() {
 
       {/* ── Service Area Map ── */}
       <div id="service-areas">
-        <ServiceMap />
+        <ServiceMap simpleSidebar footerCta={{ label: 'View Complete City Map →', to: '/service-areas' }} />
       </div>
 
       {/* ── About Strip ── */}
