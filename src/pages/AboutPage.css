@@ -1,0 +1,358 @@
+.about-section {
+  padding: 88px 40px;
+}
+
+.about-section--tinted {
+  background-color: #eaf0e4;
+}
+
+.about-section--dark {
+  background-color: #1a3d0e;
+}
+
+.about-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-overline {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #5a8c2a;
+  margin-bottom: 10px;
+}
+
+.about-heading {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  color: #1a3d0e;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.about-body {
+  font-size: 16px;
+  color: #4a5a40;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* ── Story layout ── */
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .about-story {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-story-image {
+  aspect-ratio: 4 / 3;
+  background-color: #d8e8cc;
+  border: 1px solid #c8d8bc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-placeholder-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #82b56a;
+}
+
+/* ── Mission ── */
+.mission-block {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.mission-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #8bb866;
+  margin-bottom: 24px;
+}
+
+.mission-quote {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-style: italic;
+  color: #e8f4d8;
+  line-height: 1.6;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ── Values ── */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.values-card {
+  background-color: #ffffff;
+  border: 1px solid #c8d8bc;
+  border-top: 3px solid #3d6b1e;
+  padding: 28px 28px 32px;
+  border-radius: 0 0 4px 4px;
+}
+
+.values-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a3d0e;
+  margin-bottom: 10px;
+}
+
+.values-card-body {
+  font-size: 14px;
+  color: #4a5a40;
+  line-height: 1.65;
+}
+
+/* ── Community & Culture ── */
+.culture-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (min-width: 800px) {
+  .culture-block {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.culture-content {}
+
+.culture-callout {
+  background-color: #1a3d0e;
+  padding: 36px 32px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.culture-callout-flag {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.culture-callout-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.culture-callout-body {
+  font-size: 15px;
+  font-style: italic;
+  color: #a8c890;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.culture-callout-english {
+  font-size: 13px;
+  color: #6a9a55;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #2d5420;
+}
+
+.culture-callout-phone {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #e85d04;
+  text-decoration: none;
+  transition: color 0.12s ease;
+}
+
+.culture-callout-phone:hover {
+  color: #ffffff;
+}
+
+/* ── Specialties ── */
+.about-specialties {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .about-specialties {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-specialties-image {
+  aspect-ratio: 4 / 3;
+  background-color: #d8e8cc;
+  border: 1px solid #c8d8bc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specialties-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.specialties-list li {
+  font-size: 15px;
+  color: #2d5015;
+  font-weight: 500;
+  padding-left: 20px;
+  position: relative;
+}
+
+.specialties-list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  color: #e85d04;
+  font-size: 10px;
+  top: 3px;
+}
+
+/* ── Community ── */
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.community-card {
+  background-color: #f5f7f2;
+  border: 1px solid #c8d8bc;
+  padding: 24px 24px 28px;
+  border-radius: 4px;
+}
+
+.community-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a3d0e;
+  margin-bottom: 10px;
+}
+
+.community-card p {
+  font-size: 14px;
+  color: #4a5a40;
+  line-height: 1.6;
+}
+
+/* ── Team ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #d8e8cc;
+  border: 1px solid #c8d8bc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.team-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a3d0e;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #5a8c2a;
+}
+
+/* ── CTA ── */
+.about-cta {
+  background-color: #1a3d0e;
+  padding: 88px 40px;
+  text-align: center;
+}
+
+.about-cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-cta h2 {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.about-cta p {
+  font-size: 17px;
+  color: #a8c890;
+  margin-bottom: 32px;
+}
+
+.about-cta-btn {
+  display: inline-block;
+  background-color: #e85d04;
+  color: #ffffff;
+  padding: 13px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.12s ease;
+}
+
+.about-cta-btn:hover {
+  background-color: #c94e03;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 64px 24px;
+  }
+
+  .about-cta {
+    padding: 64px 24px;
+  }
+}

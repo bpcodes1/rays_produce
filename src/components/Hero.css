@@ -1,0 +1,126 @@
+.hero {
+  background-color: #f5f7f2;
+  background-image:
+    linear-gradient(#c8d8bc 1px, transparent 1px),
+    linear-gradient(90deg, #c8d8bc 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: -1px -1px;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 55fr 45fr;
+  }
+}
+
+/* ── Text content ── */
+.hero-overline {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #5a8c2a;
+  margin-bottom: 24px;
+}
+
+.hero-headline {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1a3d0e;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.hero-body {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #4a5a40;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
+/* ── CTA buttons ── */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 13px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.hero-btn-primary {
+  background-color: #3d6b1e;
+  color: #ffffff;
+}
+
+.hero-btn-primary:hover {
+  background-color: #2d5015;
+}
+
+.hero-btn-secondary {
+  background-color: transparent;
+  color: #3d6b1e;
+  border: 1.5px solid #82b56a;
+}
+
+.hero-btn-secondary:hover {
+  background-color: #eaf0e4;
+  border-color: #3d6b1e;
+}
+
+/* ── Emblem ── */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-emblem {
+  width: 100%;
+  max-width: 380px;
+  filter: drop-shadow(0 8px 32px rgba(45, 80, 21, 0.12));
+}
+
+@media (max-width: 899px) {
+  .hero-emblem {
+    max-width: 260px;
+  }
+
+  .hero-inner {
+    padding: 60px 24px;
+    text-align: center;
+  }
+
+  .hero-body {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}

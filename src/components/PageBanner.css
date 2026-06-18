@@ -1,0 +1,40 @@
+.page-banner {
+  background-color: #1a3d0e;
+  padding: 64px 40px;
+}
+
+.page-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-breadcrumb {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #8bb866;
+  margin-bottom: 16px;
+}
+
+.page-banner-title {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.page-banner-sub {
+  font-size: 17px;
+  color: #a8c890;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 48px 24px;
+  }
+}

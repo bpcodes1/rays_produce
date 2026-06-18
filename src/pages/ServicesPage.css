@@ -1,0 +1,350 @@
+.services-section {
+  padding: 88px 40px;
+}
+
+.services-section--tinted {
+  background-color: #eaf0e4;
+}
+
+.services-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.svc-overline {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #5a8c2a;
+  margin-bottom: 10px;
+}
+
+.svc-heading {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  color: #1a3d0e;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.svc-sub {
+  font-size: 16px;
+  color: #4a5a40;
+  max-width: 560px;
+  line-height: 1.65;
+  margin-bottom: 48px;
+}
+
+.svc-body {
+  font-size: 16px;
+  color: #4a5a40;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* ── Services grid ── */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.svc-card {
+  background-color: #ffffff;
+  border: 1px solid #c8d8bc;
+  border-top: 3px solid #3d6b1e;
+  padding: 28px 28px 32px;
+}
+
+.svc-card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1a3d0e;
+  margin-bottom: 10px;
+}
+
+.svc-card-body {
+  font-size: 14px;
+  color: #4a5a40;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.svc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.svc-tag {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #3d6b1e;
+  background-color: #eaf0e4;
+  border: 1px solid #c8d8bc;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+/* ── Product categories ── */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.category-card {
+  border: 1px solid #c8d8bc;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.category-image {
+  aspect-ratio: 4 / 3;
+  background-color: #d8e8cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-placeholder-sm {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #82b56a;
+}
+
+.category-label {
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d5015;
+}
+
+/* ── How it works ── */
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.how-card {
+  padding: 32px 28px;
+  border: 1px solid #c8d8bc;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.how-step {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 36px;
+  font-weight: 700;
+  color: #eaf0e4;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.how-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1a3d0e;
+  margin-bottom: 10px;
+}
+
+.how-body {
+  font-size: 14px;
+  color: #4a5a40;
+  line-height: 1.65;
+}
+
+/* ── Customers ── */
+.customers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.customer-card {
+  background-color: #ffffff;
+  border: 1px solid #c8d8bc;
+  padding: 28px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.customer-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.customer-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1a3d0e;
+  margin-bottom: 8px;
+}
+
+.customer-body {
+  font-size: 14px;
+  color: #4a5a40;
+  line-height: 1.6;
+}
+
+/* ── Pricing ── */
+.pricing-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (min-width: 800px) {
+  .pricing-block {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.svc-cta-btn {
+  display: inline-block;
+  background-color: #3d6b1e;
+  color: #ffffff;
+  padding: 13px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-top: 8px;
+  transition: background-color 0.12s ease;
+}
+
+.svc-cta-btn:hover {
+  background-color: #2d5015;
+}
+
+.pricing-callout {
+  background-color: #1a3d0e;
+  padding: 32px 28px;
+  border-radius: 4px;
+}
+
+.pricing-callout-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #8bb866;
+  margin-bottom: 12px;
+}
+
+.pricing-callout-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #e8f4d8;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.pricing-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pricing-list li {
+  font-size: 14px;
+  color: #a8c890;
+  padding-left: 18px;
+  position: relative;
+}
+
+.pricing-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #8bb866;
+}
+
+/* ── Restogo partner ── */
+.restogo-partner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 720px) {
+  .restogo-partner {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.restogo-partner-logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restogo-partner-logo {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+}
+
+/* ── CTA banner ── */
+.svc-cta-banner {
+  background-color: #eaf0e4;
+  padding: 88px 40px;
+  text-align: center;
+}
+
+.svc-cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.svc-cta-banner h2 {
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 700;
+  color: #1a3d0e;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.svc-cta-banner p {
+  font-size: 17px;
+  color: #4a5a40;
+  margin-bottom: 32px;
+}
+
+.svc-cta-banner-btn {
+  display: inline-block;
+  background-color: #e85d04;
+  color: #ffffff;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.12s ease;
+}
+
+.svc-cta-banner-btn:hover {
+  background-color: #c94e03;
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 64px 24px;
+  }
+
+  .svc-cta-banner {
+    padding: 64px 24px;
+  }
+}

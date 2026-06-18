@@ -1,0 +1,99 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  border-bottom: 1px solid #c8d8bc;
+  height: 64px;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 100%;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* Nav links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.navbar-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5a40;
+  text-decoration: none;
+  transition: color 0.12s ease;
+}
+
+.navbar-link:hover {
+  color: #2d5015;
+}
+
+/* Se Habla Español badge */
+.navbar-espanol {
+  font-size: 11px;
+  font-weight: 600;
+  color: #3d6b1e;
+  border: 1.5px solid #82b56a;
+  border-radius: 20px;
+  padding: 4px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 900px) {
+  .navbar-espanol {
+    display: none;
+  }
+}
+
+/* CTA */
+.navbar-cta {
+  display: inline-block;
+  background-color: #3d6b1e;
+  color: #ffffff;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.12s ease;
+}
+
+.navbar-cta:hover {
+  background-color: #2d5015;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-inner {
+    padding: 0 24px;
+  }
+}
