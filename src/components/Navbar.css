@@ -1,10 +1,18 @@
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
+  background-color: transparent;
+  height: 90px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar--scrolled {
   background-color: #ffffff;
   border-bottom: 1px solid #c8d8bc;
-  height: 64px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .navbar-inner {
@@ -26,7 +34,7 @@
 }
 
 .navbar-logo-img {
-  height: 64px;
+  height: 90px;
   width: auto;
   display: block;
 }
@@ -39,14 +47,15 @@
 }
 
 .navbar-link {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   color: #4a5a40;
   text-decoration: none;
   transition: color 0.12s ease;
 }
 
-.navbar-link:hover {
+.navbar-link:hover,
+.navbar-link.is-active {
   color: #2d5015;
 }
 
@@ -74,8 +83,8 @@
   display: inline-block;
   background-color: #3d6b1e;
   color: #ffffff;
-  padding: 9px 20px;
-  font-size: 13px;
+  padding: 10px 22px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   border-radius: 3px;

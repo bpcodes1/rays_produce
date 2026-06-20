@@ -4,6 +4,7 @@ import SchemaMarkup from '../components/SchemaMarkup'
 import Hero from '../components/Hero'
 import ServiceMap from '../components/ServiceMap'
 import restogoLogo from '../restogo_logo.png'
+import originalRays from '../original_rays.jpg'
 import './HomePage.css'
 
 const VALUE_PROPS = [
@@ -113,8 +114,8 @@ export default function HomePage() {
       {/* ── About Strip ── */}
       <section className="home-section home-section--tinted" id="about-strip">
         <div className="home-section-inner about-strip">
-          <div className="about-strip-image" aria-label="Ray's Produce facility — photo coming soon">
-            <span className="img-placeholder">Photo Coming Soon</span>
+          <div className="about-strip-image">
+            <img src={originalRays} alt="The original Ray's Produce store" className="about-strip-photo" />
           </div>
           <div className="about-strip-content">
             <p className="section-overline">Our Story</p>

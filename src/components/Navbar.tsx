@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import logo from '../rays_produce_logo.png'
 import './Navbar.css'
@@ -10,8 +11,18 @@ const NAV_LINKS = [
 ]
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="navbar">
+    <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="navbar-inner">
         <Link to="/" className="navbar-logo">
           <img src={logo} alt="Ray's Produce" className="navbar-logo-img" />
