@@ -37,7 +37,6 @@ export default function AboutPage() {
       <PageBanner
         title="About Ray's Produce"
         subtitle="Family-owned. Community-driven. Delivering since 1996."
-        crumb="About"
       />
 
       {/* ── Our Story ── */}

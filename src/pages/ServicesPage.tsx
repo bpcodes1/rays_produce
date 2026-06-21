@@ -70,7 +70,6 @@ export default function ServicesPage() {
       <PageBanner
         title="Our Services"
         subtitle="High-quality food product distribution across the Pacific Northwest — daily."
-        crumb="Services"
       />
 
       {/* ── Services Overview ── */}

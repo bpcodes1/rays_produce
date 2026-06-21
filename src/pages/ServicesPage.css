@@ -325,7 +325,7 @@
 
 .svc-cta-banner-btn {
   display: inline-block;
-  background-color: #e85d04;
+  background-color: #cc2200;
   color: #ffffff;
   padding: 14px 32px;
   font-size: 16px;
@@ -336,7 +336,7 @@
 }
 
 .svc-cta-banner-btn:hover {
-  background-color: #c94e03;
+  background-color: #a81a00;
 }
 
 @media (max-width: 768px) {

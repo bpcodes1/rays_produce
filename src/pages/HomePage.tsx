@@ -5,6 +5,9 @@ import Hero from '../components/Hero'
 import ServiceMap from '../components/ServiceMap'
 import restogoLogo from '../restogo_logo.png'
 import originalRays from '../original_rays.jpg'
+import beginning from '../beginning.jpg'
+import hero2 from '../hero2.jpg'
+import raysNewberg from '../rays_newberg.jpg'
 import './HomePage.css'
 
 const VALUE_PROPS = [
@@ -43,9 +46,9 @@ export default function HomePage() {
           <span className="trust-divider" aria-hidden="true">·</span>
           <span className="trust-item">Family Owned &amp; Operated</span>
           <span className="trust-divider" aria-hidden="true">·</span>
-          <span className="trust-item trust-item--highlight">Latino-Owned</span>
+          <span className="trust-item trust-item--highlight"><strong>Latino-Owned</strong></span>
           <span className="trust-divider" aria-hidden="true">·</span>
-          <span className="trust-item trust-item--highlight">Se Habla Español</span>
+          <span className="trust-item trust-item--highlight"><strong>Se Habla Español</strong></span>
           <span className="trust-divider" aria-hidden="true">·</span>
           <span className="trust-item">Oregon &amp; Washington</span>
           <span className="trust-divider" aria-hidden="true">·</span>
@@ -65,10 +68,12 @@ export default function HomePage() {
             and service you can count on.
           </p>
           <div className="value-grid">
-            {VALUE_PROPS.map(v => (
+            {VALUE_PROPS.map((v, i) => (
               <div key={v.title} className="value-card">
-                <span className="value-icon" aria-hidden="true">{v.icon}</span>
-                <h3 className="value-title">{v.title}</h3>
+                <div className="value-header">
+                  <span className="value-number">{String(i + 1).padStart(2, '0')}</span>
+                  <h3 className="value-title">{v.title}</h3>
+                </div>
                 <p className="value-body">{v.body}</p>
               </div>
             ))}
@@ -108,14 +113,14 @@ export default function HomePage() {
 
       {/* ── Service Area Map ── */}
       <div id="service-areas">
-        <ServiceMap simpleSidebar footerCta={{ label: 'View Complete City Map →', to: '/service-areas' }} />
+        <ServiceMap simpleSidebar title="Areas We Serve" footerCta={{ label: 'View Complete City Map →', to: '/service-areas' }} />
       </div>
 
       {/* ── About Strip ── */}
       <section className="home-section home-section--tinted" id="about-strip">
         <div className="home-section-inner about-strip">
           <div className="about-strip-image">
-            <img src={originalRays} alt="The original Ray's Produce store" className="about-strip-photo" />
+            <img src={beginning} alt="The original Ray's Produce store" className="about-strip-photo" />
           </div>
           <div className="about-strip-content">
             <p className="section-overline">Our Story</p>
@@ -132,6 +137,49 @@ export default function HomePage() {
               customer service.
             </p>
             <Link to="/about" className="btn-outline">Learn Our Story →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Locations ── */}
+      <section className="home-section" id="locations">
+        <div className="home-section-inner">
+          <p className="section-overline">Find Us</p>
+          <h2 className="section-title">Our Locations</h2>
+          <div className="locations-grid">
+            <div className="location-card">
+              <div className="location-img">
+                <img src={hero2} alt="Ray's Produce / Restogo HQ" className="location-img-photo" />
+                <span className="location-city-tag">📍 Salem, OR</span>
+              </div>
+              <div className="location-info">
+                <span className="location-badge">Headquarters</span>
+                <h3 className="location-name">Ray's Produce / Restogo HQ</h3>
+                <p className="location-type">Distribution &amp; Operations</p>
+              </div>
+            </div>
+            <div className="location-card">
+              <div className="location-img">
+                <img src={originalRays} alt="Retail & Wholesale Market" className="location-img-photo" />
+                <span className="location-city-tag">📍 Salem, OR</span>
+              </div>
+              <div className="location-info">
+                <span className="location-badge">Market</span>
+                <h3 className="location-name">Retail &amp; Wholesale Market</h3>
+                <p className="location-type">Open to the Public</p>
+              </div>
+            </div>
+            <div className="location-card">
+              <div className="location-img">
+                <img src={raysNewberg} alt="Ray's Produce Newberg" className="location-img-photo location-img-photo--top" />
+                <span className="location-city-tag">📍 Newberg, OR</span>
+              </div>
+              <div className="location-info">
+                <span className="location-badge">Location</span>
+                <h3 className="location-name">Ray's Produce Newberg</h3>
+                <p className="location-type">Retail &amp; Local Delivery</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

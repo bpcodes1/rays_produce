@@ -183,7 +183,7 @@
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
-  color: #e85d04;
+  color: #cc2200;
   text-decoration: none;
   transition: color 0.12s ease;
 }
@@ -236,7 +236,7 @@
   content: '★';
   position: absolute;
   left: 0;
-  color: #e85d04;
+  color: #cc2200;
   font-size: 10px;
   top: 3px;
 }
@@ -333,7 +333,7 @@
 
 .about-cta-btn {
   display: inline-block;
-  background-color: #e85d04;
+  background-color: #cc2200;
   color: #ffffff;
   padding: 13px 28px;
   font-size: 15px;
@@ -344,7 +344,7 @@
 }
 
 .about-cta-btn:hover {
-  background-color: #c94e03;
+  background-color: #a81a00;
 }
 
 @media (max-width: 768px) {

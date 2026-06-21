@@ -59,6 +59,21 @@
   color: #2d5015;
 }
 
+/* Inner-page transparent state — white text over dark hero image */
+.navbar--over-dark .navbar-link {
+  color: #ffffff;
+}
+
+.navbar--over-dark .navbar-link:hover,
+.navbar--over-dark .navbar-link.is-active {
+  color: #a8e070;
+}
+
+.navbar--over-dark .navbar-espanol {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
 /* Se Habla Español badge */
 .navbar-espanol {
   font-size: 11px;
@@ -97,9 +112,92 @@
   background-color: #2d5015;
 }
 
+/* Hamburger button — hidden on desktop */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #2d5015;
+  border-radius: 2px;
+  transition: background-color 0.15s ease;
+}
+
+.navbar--over-dark .hamburger-bar {
+  background-color: #ffffff;
+}
+
+.navbar--scrolled .hamburger-bar {
+  background-color: #2d5015;
+}
+
+/* Mobile dropdown menu */
+.navbar-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-top: 1px solid #c8d8bc;
+  padding: 12px 0 20px;
+}
+
+.mobile-nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2d5015;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-bottom: 1px solid #eef4e8;
+  transition: background-color 0.1s ease;
+}
+
+.mobile-nav-link:last-of-type {
+  border-bottom: none;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.is-active {
+  background-color: #f3f8ee;
+  color: #1a3d0e;
+}
+
+.mobile-nav-cta {
+  display: block;
+  margin: 16px 24px 0;
+  background-color: #3d6b1e;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.12s ease;
+}
+
+.mobile-nav-cta:hover {
+  background-color: #2d5015;
+}
+
 @media (max-width: 768px) {
-  .navbar-nav {
+  .navbar-nav,
+  .navbar-cta,
+  .navbar-espanol {
     display: none;
+  }
+
+  .navbar-hamburger {
+    display: flex;
   }
 
   .navbar-inner {

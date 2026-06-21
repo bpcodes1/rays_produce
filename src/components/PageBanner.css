@@ -1,21 +1,29 @@
 .page-banner {
-  background-color: #1a3d0e;
+  position: relative;
+  background-size: cover;
+  background-position: center 43%;
+  background-repeat: no-repeat;
   padding: 154px 40px 64px;
 }
 
+.page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 30, 5, 0.88) 0%,
+    rgba(10, 30, 5, 0.68) 50%,
+    rgba(10, 30, 5, 0.52) 100%
+  );
+}
+
 .page-banner-inner {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.page-breadcrumb {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: #8bb866;
-  margin-bottom: 16px;
-}
 
 .page-banner-title {
   font-size: clamp(32px, 4vw, 52px);
@@ -24,6 +32,7 @@
   letter-spacing: -0.02em;
   line-height: 1.1;
   margin-bottom: 12px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
 .page-banner-sub {
@@ -31,10 +40,25 @@
   color: #a8c890;
   max-width: 560px;
   line-height: 1.6;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+}
+
+@media (min-width: 1440px) {
+  .page-banner {
+    padding: 220px 40px 100px;
+  }
 }
 
 @media (max-width: 768px) {
   .page-banner {
-    padding: 48px 24px;
+    padding: 116px 24px 48px;
+  }
+
+  .page-banner-title {
+    font-size: 24px;
+  }
+
+  .page-banner-sub {
+    font-size: 15px;
   }
 }

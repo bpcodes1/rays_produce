@@ -53,7 +53,6 @@ export default function ContactPage() {
       <PageBanner
         title="Let's Work Together"
         subtitle="Fill out the form below and we'll get back to you within 1 business day."
-        crumb="Contact"
       />
 
       {/* ── Form + Details ── */}

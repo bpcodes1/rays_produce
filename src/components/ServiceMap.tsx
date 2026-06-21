@@ -267,9 +267,10 @@ interface ServiceMapProps {
   showAllPins?: boolean
   footerCta?: { label: string; to: string }
   simpleSidebar?: boolean
+  title?: string
 }
 
-export default function ServiceMap({ showAllPins = false, footerCta, simpleSidebar = false }: ServiceMapProps) {
+export default function ServiceMap({ showAllPins = false, footerCta, simpleSidebar = false, title }: ServiceMapProps) {
   const [expandedArea, setExpandedArea] = useState<string | null>(null)
   const [selectedCity, setSelectedCity] = useState<string | null>(null)
 
@@ -289,6 +290,11 @@ export default function ServiceMap({ showAllPins = false, footerCta, simpleSideb
 
   return (
     <section className="service-map-section">
+      {title && (
+        <div className="map-section-header">
+          <h2 className="map-section-title">{title}</h2>
+        </div>
+      )}
       <div className="areas">
         {/* Left column: map */}
         <div className="map-card">
@@ -351,7 +357,7 @@ export default function ServiceMap({ showAllPins = false, footerCta, simpleSideb
               <Marker key={city.name} coordinates={city.coords!}>
                 <circle
                   r={city.hq ? 6 : 3.5}
-                  fill={city.hq ? '#e85d04' : '#1a3d0e'}
+                  fill={city.hq ? '#cc2200' : '#1a3d0e'}
                   stroke="#ffffff"
                   strokeWidth={city.hq ? 2 : 1.5}
                 />

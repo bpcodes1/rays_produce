@@ -48,7 +48,7 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: #e85d04;
+  color: #cc2200;
   margin-bottom: 16px;
   font-weight: 700;
 }
@@ -165,7 +165,7 @@
 
 .sa-cta-btn {
   display: inline-block;
-  background-color: #e85d04;
+  background-color: #cc2200;
   color: #ffffff;
   padding: 14px 32px;
   font-size: 16px;
@@ -176,7 +176,7 @@
 }
 
 .sa-cta-btn:hover {
-  background-color: #c94e03;
+  background-color: #a81a00;
 }
 
 @media (max-width: 768px) {

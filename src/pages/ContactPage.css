@@ -63,7 +63,7 @@
 }
 
 .form-field label span {
-  color: #e85d04;
+  color: #cc2200;
 }
 
 .form-field input,
@@ -210,7 +210,7 @@ a.detail-value:hover {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #e85d04;
+  color: #cc2200;
   margin-bottom: 6px;
 }
 

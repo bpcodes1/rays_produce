@@ -61,7 +61,6 @@ export default function ServiceAreasPage() {
       <PageBanner
         title="Where We Deliver"
         subtitle="Daily routes across 50+ cities in Oregon and Washington."
-        crumb="Service Areas"
       />
 
       {/* ── Map ── */}
