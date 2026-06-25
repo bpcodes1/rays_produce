@@ -4,6 +4,10 @@ import SchemaMarkup from '../components/SchemaMarkup'
 import Hero from '../components/Hero'
 import ServiceMap from '../components/ServiceMap'
 import restogoLogo from '../restogo_logo.png'
+import groupIcon from '../group_icon.png'
+import warehouseIcon from '../warehouse_icon.png'
+import truckIcon from '../truck_icon.png'
+import locationIcon from '../location_icon.png'
 import originalRays from '../original_rays.jpg'
 import beginning from '../beginning.jpg'
 import hero2 from '../hero2.jpg'
@@ -39,22 +43,48 @@ export default function HomePage() {
 
       <Hero />
 
-      {/* ── Trust Bar ── */}
+      {/* ── Stats Bar ── */}
       <section className="trust-bar" aria-label="Company highlights">
         <div className="trust-bar-inner">
-          <span className="trust-item"><strong>Est. 1996</strong></span>
-          <span className="trust-divider" aria-hidden="true">·</span>
-          <span className="trust-item">Family Owned &amp; Operated</span>
-          <span className="trust-divider" aria-hidden="true">·</span>
-          <span className="trust-item trust-item--highlight"><strong>Latino-Owned</strong></span>
-          <span className="trust-divider" aria-hidden="true">·</span>
-          <span className="trust-item trust-item--highlight"><strong>Se Habla Español</strong></span>
-          <span className="trust-divider" aria-hidden="true">·</span>
-          <span className="trust-item">Oregon &amp; Washington</span>
-          <span className="trust-divider" aria-hidden="true">·</span>
-          <span className="trust-item">Daily Deliveries</span>
-          <span className="trust-divider" aria-hidden="true">·</span>
-          <span className="trust-item">50+ Cities Served</span>
+          <div className="stat-item">
+            <img src={groupIcon} alt="" className="stat-icon" aria-hidden="true" />
+            <div className="stat-text">
+              <span className="stat-number">2,000+</span>
+              <span className="stat-label">Customers Served</span>
+            </div>
+          </div>
+          <span className="stat-divider" aria-hidden="true" />
+          <div className="stat-item">
+            <img src={warehouseIcon} alt="" className="stat-icon" aria-hidden="true" />
+            <div className="stat-text">
+              <span className="stat-number">150,000</span>
+              <span className="stat-label">Sq Ft Distribution Center</span>
+            </div>
+          </div>
+          <span className="stat-divider" aria-hidden="true" />
+          <div className="stat-item">
+            <img src={groupIcon} alt="" className="stat-icon" aria-hidden="true" />
+            <div className="stat-text">
+              <span className="stat-number">100+</span>
+              <span className="stat-label">Employees</span>
+            </div>
+          </div>
+          <span className="stat-divider" aria-hidden="true" />
+          <div className="stat-item">
+            <img src={truckIcon} alt="" className="stat-icon" aria-hidden="true" />
+            <div className="stat-text">
+              <span className="stat-number">Daily</span>
+              <span className="stat-label">Deliveries</span>
+            </div>
+          </div>
+          <span className="stat-divider" aria-hidden="true" />
+          <div className="stat-item">
+            <img src={locationIcon} alt="" className="stat-icon" aria-hidden="true" />
+            <div className="stat-text">
+              <span className="stat-label">Serving Oregon,</span>
+              <span className="stat-label">Washington & Idaho</span>
+            </div>
+          </div>
         </div>
       </section>
 

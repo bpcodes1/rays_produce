@@ -23,7 +23,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 0 40px 36px;
+  padding: 0 40px 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,6 +45,13 @@
   line-height: 1.1;
   color: #ffffff;
   letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.hero-subheadline {
+  font-size: clamp(15px, 2vw, 22px);
+  font-weight: 400;
+  color: #ffffff;
   margin-bottom: 28px;
 }
 
@@ -66,12 +73,12 @@
 }
 
 .hero-btn-primary {
-  background-color: #cc2200;
+  background-color: #0B5017;
   color: #ffffff;
 }
 
 .hero-btn-primary:hover {
-  background-color: #a81a00;
+  background-color: #0a3a1a;
 }
 
 .hero-btn-secondary {

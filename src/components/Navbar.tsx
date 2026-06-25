@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
-import logo from '../rays_produce_logo.png'
+import logo from '../logo_text_transparent.png'
 import './Navbar.css'
 
 const NAV_LINKS = [
@@ -56,7 +56,7 @@ export default function Navbar() {
         </nav>
 
         <span className="navbar-espanol">Se Habla Español</span>
-        <Link to="/contact#quote" className="navbar-cta">Get a Quote</Link>
+        <Link to="/contact#quote" className="navbar-cta">Talk to Sales</Link>
 
         <button
           className="navbar-hamburger"
@@ -87,7 +87,7 @@ export default function Navbar() {
             className="mobile-nav-cta"
             onClick={() => setMenuOpen(false)}
           >
-            Get a Quote
+            Talk to Sales
           </Link>
         </nav>
       )}

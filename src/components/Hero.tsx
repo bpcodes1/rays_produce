@@ -8,10 +8,11 @@ export default function Hero() {
       <div className="hero-gradient" />
       <div className="hero-content">
         <p className="hero-overline">Family Owned · Salem, Oregon · Est. 1996</p>
-        <h1 className="hero-headline">Farm-Fresh Produce,<br />Delivered Daily</h1>
+        <h1 className="hero-headline">Complete Foodservice Distribution</h1>
+        <p className="hero-subheadline">For Restaurants Across the Northwest</p>
         <div className="hero-actions">
-          <Link to="/contact#quote" className="hero-btn hero-btn-primary">Get a Quote →</Link>
-          <Link to="/service-areas" className="hero-btn hero-btn-secondary">View Service Areas</Link>
+          <Link to="/contact#quote" className="hero-btn hero-btn-primary">Open an Account →</Link>
+          <Link to="/contact" className="hero-btn hero-btn-secondary">Talk to a Sales Rep →</Link>
         </div>
       </div>
     </section>
