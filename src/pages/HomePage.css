@@ -13,7 +13,7 @@
 
 /* ── Shared typography ── */
 .section-overline {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -160,17 +160,18 @@
 }
 
 .value-number {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #cc2200;
+  color: #5a8c2a;
   flex-shrink: 0;
 }
 
 .value-title {
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #1a56a8;
+  color: #1a3d0e;
 }
 
 .value-body {
@@ -301,7 +302,7 @@
 }
 
 .img-placeholder {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -351,7 +352,7 @@
 }
 
 .location-img-placeholder {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -379,7 +380,7 @@
 
 .location-badge {
   display: inline-block;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -434,7 +435,7 @@
 }
 
 .testimonial-author {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.1em;

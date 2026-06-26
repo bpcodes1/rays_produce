@@ -10,7 +10,7 @@ import truckIcon from '../truck_icon.png'
 import locationIcon from '../location_icon.png'
 import originalRays from '../original_rays.jpg'
 import beginning from '../beginning.jpg'
-import hero2 from '../hero2.jpg'
+import raysProduceHero from '../Rays-produce.png'
 import raysNewberg from '../rays_newberg.jpg'
 import './HomePage.css'
 
@@ -179,7 +179,7 @@ export default function HomePage() {
           <div className="locations-grid">
             <div className="location-card">
               <div className="location-img">
-                <img src={hero2} alt="Ray's Produce / Restogo HQ" className="location-img-photo" />
+                <img src={raysProduceHero} alt="Ray's Produce / Restogo HQ" className="location-img-photo" />
                 <span className="location-city-tag">📍 Salem, OR</span>
               </div>
               <div className="location-info">

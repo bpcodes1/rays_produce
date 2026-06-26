@@ -167,7 +167,7 @@
 }
 
 .city-state {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -210,7 +210,7 @@
 }
 
 .panel-label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   letter-spacing: 0.12em;
   color: #8bb866;

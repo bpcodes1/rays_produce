@@ -16,7 +16,7 @@
 }
 
 .about-overline {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -65,7 +65,7 @@
 }
 
 .img-placeholder-text {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -80,7 +80,7 @@
 }
 
 .mission-label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -298,7 +298,7 @@
 }
 
 .team-role {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.12em;

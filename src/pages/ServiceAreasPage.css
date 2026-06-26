@@ -12,7 +12,7 @@
 }
 
 .sa-overline {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -44,7 +44,7 @@
 }
 
 .sa-state-label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -86,15 +86,16 @@
 }
 
 .sa-faq-list {
-  border: 1px solid #c8d8bc;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .sa-faq-item {
-  border-bottom: 1px solid #c8d8bc;
-}
-
-.sa-faq-item:last-child {
-  border-bottom: none;
+  border: 1px solid #c8d8bc;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sa-faq-question {
@@ -127,6 +128,16 @@
   color: #5a8c2a;
   flex-shrink: 0;
   font-size: 13px;
+}
+
+.sa-faq-answer-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.sa-faq-item.is-open .sa-faq-answer-wrapper {
+  max-height: 300px;
 }
 
 .sa-faq-answer {

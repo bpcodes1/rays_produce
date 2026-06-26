@@ -129,6 +129,21 @@ const AREAS: AreaGroup[] = [
         dy: 4,
       },
       { name: 'Warrenton',   state: 'OR', coords: [-123.9251, 46.1651], pinOnly: true },
+      { name: 'Seaside',     state: 'OR', coords: [-123.9218, 45.9932], pinOnly: true },
+      { name: 'Manzanita',   state: 'OR', coords: [-123.9296, 45.7221], pinOnly: true },
+      { name: 'Tillamook',   state: 'OR', coords: [-123.8443, 45.4563], pinOnly: true },
+      { name: 'Depoe Bay',   state: 'OR', coords: [-124.0635, 44.8121], pinOnly: true },
+      { name: 'Newport',     state: 'OR', coords: [-124.0532, 44.6368], pinOnly: true },
+      { name: 'Waldport',    state: 'OR', coords: [-124.0679, 44.4296], pinOnly: true },
+      { name: 'Yachats',     state: 'OR', coords: [-124.1057, 44.3149], pinOnly: true },
+      { name: 'Reedsport',   state: 'OR', coords: [-124.0990, 43.7057], pinOnly: true },
+      { name: 'Lakeside',    state: 'OR', coords: [-124.1785, 43.5763], pinOnly: true },
+      { name: 'North Bend',  state: 'OR', coords: [-124.2243, 43.4068], pinOnly: true },
+      { name: 'Coquille',    state: 'OR', coords: [-124.1804, 43.1777], pinOnly: true },
+      { name: 'Bandon',      state: 'OR', coords: [-124.4085, 43.1188], pinOnly: true },
+      { name: 'Port Orford', state: 'OR', coords: [-124.4996, 42.7399], pinOnly: true },
+      { name: 'Gold Beach',  state: 'OR', coords: [-124.4243, 42.4096], pinOnly: true },
+      { name: 'Brookings',   state: 'OR', coords: [-124.2838, 42.0527], pinOnly: true },
       { name: 'Hood River',  state: 'OR', coords: [-121.5218, 45.7071], pinOnly: true },
       { name: 'The Dalles',  state: 'OR', coords: [-121.1787, 45.5946], pinOnly: true },
       { name: 'Boardman',    state: 'OR', coords: [-119.6968, 45.8393], pinOnly: true },
@@ -168,7 +183,6 @@ const AREAS: AreaGroup[] = [
       { name: 'Grants Pass',   state: 'OR', coords: [-123.3284, 42.4393], pinOnly: true },
       { name: 'Roseburg',      state: 'OR', coords: [-123.3507, 43.2165], pinOnly: true },
       { name: 'Ashland',       state: 'OR', coords: [-122.7098, 42.1946], pinOnly: true },
-      { name: 'Klamath Falls', state: 'OR', coords: [-121.7817, 42.2249], pinOnly: true },
       { name: 'Merrill',       state: 'OR', coords: [-121.5999, 42.0235], pinOnly: true },
     ],
   },
@@ -366,7 +380,7 @@ export default function ServiceMap({ showAllPins = false, footerCta, simpleSideb
                   dx={city.dx ?? 8}
                   dy={city.dy ?? 4}
                   fontSize={9}
-                  fontFamily="'Courier New', monospace"
+                  fontFamily="'Montserrat', sans-serif"
                   fill="#1a1a1a"
                   stroke="#e4ede0"
                   strokeWidth={2.5}
@@ -381,7 +395,7 @@ export default function ServiceMap({ showAllPins = false, footerCta, simpleSideb
               x={8}
               y={472}
               fontSize={8}
-              fontFamily="'Courier New', monospace"
+              fontFamily="'Montserrat', sans-serif"
               fill="#2d5420"
               opacity={0.4}
               letterSpacing="0.1em"
