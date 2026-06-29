@@ -15,12 +15,12 @@ import raysNewberg from '../rays_newberg.jpg'
 import './HomePage.css'
 
 const VALUE_PROPS = [
-  { icon: '🥦', title: 'High-Quality Products',    body: 'Premium food products sourced for freshness, consistency, and quality your customers will notice.' },
-  { icon: '🌎', title: 'Latino-Owned & Bilingual', body: 'Proudly Latino-owned and operated. Our bilingual team serves Spanish-speaking customers and partners — se habla español.' },
-  { icon: '💵', title: 'Competitive Pricing',      body: 'Fair market pricing with long-term partnership rates. We make it easier to run a profitable operation.' },
-  { icon: '🚚', title: 'Daily Deliveries',         body: 'Reliable daily delivery routes across Oregon and Washington. On time, every time.' },
-  { icon: '🤝', title: 'Lasting Partnerships',     body: 'We prioritize long-term relationships over one-off transactions. Your success is our success.' },
-  { icon: '🌟', title: 'Excellent Customer Service', body: 'Real people who know your business, your preferences, and respond when you need them.' },
+  { icon: '🥦', title: 'Regional Distribution Network', body: 'Serving customers across Oregon, Washington, and Idaho with dependable delivery routes built for foodservice operations.' },
+  { icon: '🌎', title: '150,000 Sq Ft Distribution Center', body: 'Operating from one of the region\'s largest independent food distribution facilities designed for speed and inventory availability.' },
+  { icon: '💵', title: '2,000+ Businesses Served', body: 'Trusted by restaurants, grocery stores, wholesalers, institutions, and multi-location operators throughout the Northwest.' },
+  { icon: '🚚', title: 'Complete Restaurant Supply Solutions', body: 'From fresh produce, dairy, meats, frozen foods, spices, beverages, dry goods, cleaning supplies, disposables, and custom packaging — we supply everything businesses need to operate efficiently.' },
+  { icon: '🤝', title: 'Family-Owned Since 1996', body: 'Built on long-term relationships, consistency, and a commitment to helping independent businesses grow.' },
+  { icon: '🌟', title: 'Private Label & Import Solutions', body: 'Through Restogo, we directly source packaging and custom branded solutions that help customers lower costs and scale faster.' },
 ]
 
 const WHO_WE_SERVE = [
@@ -94,8 +94,8 @@ export default function HomePage() {
           <p className="section-overline">Why Choose Us</p>
           <h2 className="section-title">The Ray's Produce Difference</h2>
           <p className="section-sub">
-            Since 1996, we've built our reputation on quality products, honest pricing,
-            and service you can count on.
+            Why Leading Restaurants Choose Ray's Produce.<br />
+            Serving the West Coast Industry Since 1996.
           </p>
           <div className="value-grid">
             {VALUE_PROPS.map((v, i) => (
@@ -162,9 +162,9 @@ export default function HomePage() {
               roots remain the same: family, community, and quality you can count on.
             </p>
             <p className="about-body">
-              Competitive prices and lasting partnerships — that's our promise. We prioritize
-              forging enduring relationships built on trust, reliability, and exceptional
-              customer service.
+              From selling strawberries out of the back of a truck in the 1990s to building one of the Northwest's leading
+              independent foodservice distributors — Ray's Produce has spent nearly 30 years growing through hard work,
+              family values, and long-term customer relationships.
             </p>
             <Link to="/about" className="btn-outline">Learn Our Story →</Link>
           </div>

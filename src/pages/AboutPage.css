@@ -98,6 +98,83 @@
   margin: 0;
 }
 
+/* ── Timeline ── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 40px;
+  border-left: 2px solid #c8d8bc;
+  padding-left: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0 32px;
+  padding: 0 0 36px 32px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #3d6b1e;
+  border: 2px solid #ffffff;
+}
+
+.timeline-year {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3d6b1e;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+
+.timeline-label {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a3d0e;
+  margin-bottom: 6px;
+}
+
+.timeline-body {
+  font-size: 14px;
+  color: #4a5a40;
+  line-height: 1.65;
+}
+
+/* ── Today Grid ── */
+.today-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+@media (min-width: 800px) {
+  .today-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.today-body {
+  font-size: 16px;
+  color: #c8e4b0;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.today-body strong {
+  color: #ffffff;
+}
+
 /* ── Values ── */
 .values-grid {
   display: grid;
@@ -307,7 +384,7 @@
 
 /* ── CTA ── */
 .about-cta {
-  background-color: #1a3d0e;
+  background-color: #eaf0e4;
   padding: 88px 40px;
   text-align: center;
 }
@@ -320,14 +397,14 @@
 .about-cta h2 {
   font-size: clamp(26px, 3vw, 38px);
   font-weight: 700;
-  color: #ffffff;
+  color: #1a3d0e;
   letter-spacing: -0.02em;
   margin-bottom: 14px;
 }
 
 .about-cta p {
   font-size: 17px;
-  color: #a8c890;
+  color: #4a5a40;
   margin-bottom: 32px;
 }
 
