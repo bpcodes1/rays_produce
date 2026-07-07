@@ -12,14 +12,14 @@ const REGIONS = [
       { name: 'Portland Metro',          body: 'Portland, Beaverton, Hillsboro, Gresham, Lake Oswego, Tigard, and surrounding cities.' },
       { name: 'Salem / Willamette Valley', body: 'Salem, Keizer, Woodburn, Silverton, Albany, Corvallis, and the greater valley.' },
       { name: 'Eugene / Springfield',    body: 'Eugene, Springfield, Junction City, Cottage Grove, and nearby areas.' },
-      { name: 'Southern Oregon',         body: 'Medford, Ashland, Grants Pass, Klamath Falls, and surrounding communities.' },
+      { name: 'Southern Oregon',         body: 'Medford, Ashland, Grants Pass, and surrounding communities.' },
     ],
   },
   {
     state: 'Washington',
     areas: [
       { name: 'Puget Sound',         body: 'Seattle, Tacoma, Olympia, Bellevue, Renton, Kent, and the broader Puget Sound region.' },
-      { name: 'Eastern Washington',  body: 'Spokane, Yakima, the Tri-Cities, Wenatchee, and surrounding Eastern WA communities.' },
+      { name: 'Eastern Washington',  body: 'Spokane, Yakima, the Tri-Cities, and surrounding Eastern WA communities.' },
     ],
   },
 ]
@@ -109,7 +109,9 @@ export default function ServiceAreasPage() {
                   <span>{faq.q}</span>
                   <span className="sa-faq-chevron" aria-hidden="true">{openFaq === i ? '▾' : '▸'}</span>
                 </button>
-                {openFaq === i && <p className="sa-faq-answer">{faq.a}</p>}
+                <div className="sa-faq-answer-wrapper">
+                  <p className="sa-faq-answer">{faq.a}</p>
+                </div>
               </div>
             ))}
           </div>

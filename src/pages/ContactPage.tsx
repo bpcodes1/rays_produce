@@ -138,8 +138,13 @@ export default function ContactPage() {
 
               <p className="detail-label">Address</p>
               <address className="detail-value detail-address">
-                4004 Fairview Industrial Dr SE<br />
-                Salem, OR 97302
+                <strong>Salem</strong><br />
+                3011 Silverton Rd NE<br />
+                Salem, OR 97301<br />
+                <br />
+                <strong>Newberg</strong><br />
+                205 N Main St<br />
+                Newberg, OR 97132
               </address>
 
               <p className="detail-label">Business Hours</p>

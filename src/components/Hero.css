@@ -31,8 +31,8 @@
 }
 
 .hero-overline {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 11px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #a8e070;
@@ -49,6 +49,7 @@
 }
 
 .hero-subheadline {
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(15px, 2vw, 22px);
   font-weight: 400;
   color: #ffffff;

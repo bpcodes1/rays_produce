@@ -3,7 +3,7 @@
 :root {
   --font-heading: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
   --font-body:    'Nunito', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono:    'Courier New', Courier, monospace;
+  --font-mono:    'Montserrat', sans-serif;
 }
 
 *, *::before, *::after {

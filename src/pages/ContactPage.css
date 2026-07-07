@@ -152,7 +152,7 @@
 }
 
 .detail-label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -206,7 +206,7 @@ a.detail-value:hover {
 }
 
 .contact-note-label {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -227,7 +227,7 @@ a.detail-value:hover {
 }
 
 .faq-overline {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -303,7 +303,7 @@ a.detail-value:hover {
 }
 
 .social-overline {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
