@@ -156,12 +156,6 @@ export default function HomePage() {
             <p className="section-overline">Our Story</p>
             <h2 className="section-title">Family Owned Since 1996</h2>
             <p className="about-body">
-              Ray's Produce Inc. began as a family-owned produce store in Salem, Oregon,
-              specializing in locally grown produce and seasonal items. Nearly three decades
-              later, we've grown into a trusted full-service food distributor — but our
-              roots remain the same: family, community, and quality you can count on.
-            </p>
-            <p className="about-body">
               Competitive prices and lasting partnerships — that's our promise. We prioritize
               forging enduring relationships built on trust, reliability, and exceptional
               customer service.

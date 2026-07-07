@@ -102,23 +102,18 @@ export default function AboutPage() {
         <div className="about-section-inner culture-block">
           <div className="culture-content">
             <p className="about-overline">Our Heritage</p>
-            <h2 className="about-heading">Proudly Latino-Owned & Bilingual</h2>
+            <h2 className="about-heading">Proudly Family-Owned. Proudly Bilingual.</h2>
             <p className="about-body">
-              Ray's Produce Inc. was built on the values of hard work, family, and
-              community — values deeply rooted in Latino culture. As a proudly
-              Latino-owned business, we understand the importance of trust, personal
-              relationships, and taking care of the people around you.
+              For nearly 30 years, Ray's Produce has been built on hard work, family
+              values, and lasting relationships. As a family-owned business, we're proud to
+              serve restaurants and foodservice operators throughout Oregon and
+              Washington with dependable service and personal attention.
             </p>
             <p className="about-body">
-              Our bilingual team speaks Spanish and English fluently, making it easier
-              for Spanish-speaking customers, partners, and vendors to do business with
-              us comfortably and confidently. No language barriers, no intermediaries —
-              just direct, honest communication.
-            </p>
-            <p className="about-body">
-              We are proud to serve Salem's vibrant Latino community and the broader
-              Pacific Northwest, reflecting the diversity and strength of the region
-              we call home.
+              Our bilingual team speaks both English and Spanish, making it easy for
+              customers, vendors, and partners to communicate in the language they're
+              most comfortable with. Whether you're placing an order, opening a new
+              account, or growing your business, we're here to help.
             </p>
           </div>
           <div className="culture-callout">

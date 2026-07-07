@@ -3,28 +3,44 @@ import SEO from '../components/SEO'
 import PageBanner from '../components/PageBanner'
 import restogoLogo from '../restogo_logo.png'
 import restogoTransparent from '../restogo_transparent.png'
+import logoEastsideMeats from '../assets/brands/eastside_meats.png'
+import logoDarigold from '../assets/brands/dairygold.webp'
+import logoAlpine from '../assets/brands/alpine.avif'
+import logoDairyFreshNW from '../assets/brands/dairy_fresh_northwest.webp'
+import logoCocaCola from '../assets/brands/coca_cola.png'
+import logoRiceland from '../assets/brands/riceland.svg'
+import logoOleMexicanFoods from '../assets/brands/ole_mexican_foods.webp'
+import logoEmbasa from '../assets/brands/embasa.png'
+import logoProductosReal from '../assets/brands/productos_real.png'
+import logoAguasFrescas from '../assets/brands/aguas_frescas_de_mexico.png'
 import './ServicesPage.css'
 
 const SERVICES = [
   {
-    title: 'Fresh Produce Distribution',
-    body: 'Seasonal and year-round fruits and vegetables sourced from quality growers across the Pacific Northwest and beyond. Delivered fresh, daily.',
-    tags: ['Fruits', 'Vegetables', 'Seasonal Items', 'Locally Grown'],
+    title: 'Fresh Produce',
+    subtitle: 'Built for Restaurant Kitchens',
+    body: 'We specialize in the fresh vegetables restaurants use every day—from tomatoes, onions, peppers, cilantro, avocados, and lettuce to specialty produce and seasonal items. With daily deliveries and reliable quality, we help keep your kitchen stocked and your customers satisfied.',
+    tags: ['Tomatoes', 'Onions', 'Lettuce', 'Peppers & Chiles', 'Avocados', 'Cilantro & Herbs', 'Cucumbers', 'Potatoes', 'Carrots', 'Seasonal Produce'],
   },
   {
-    title: 'Bakery & Bread Products',
-    body: 'Fresh bakery and bread products delivered on our daily routes. Keep your restaurant stocked with the freshest baked goods your customers expect.',
-    tags: ['Bread', 'Rolls', 'Baked Goods', 'Daily Fresh'],
+    title: 'Dairy, Meat & Refrigerated',
+    body: 'Milk, cheese, eggs, meats, tortillas, deli products, and refrigerated essentials from leading brands.',
+    tags: ['Cheese', 'Dairy', 'Meat', 'Refrigerated'],
   },
   {
-    title: 'Wholesale Supply',
-    body: 'Large-volume orders for wholesale distributors and buyers. Competitive bulk pricing with reliable delivery schedules built around your operation.',
-    tags: ['Bulk Orders', 'Volume Pricing', 'Flexible Scheduling'],
+    title: 'Frozen Foods',
+    body: 'Vegetables, potatoes, desserts, proteins, seafood, and frozen restaurant favorites.',
+    tags: ['Fries', 'Seafood', 'Proteins', 'Frozen Foods'],
   },
   {
-    title: 'Retail & Processor Supply',
-    body: 'Tailored supply programs for grocery retailers and food processing operations. Consistent quality and volume you can plan your production around.',
-    tags: ['Retail Ready', 'Processors', 'Consistent Supply'],
+    title: 'Dry Goods & Kitchen Essentials',
+    body: 'Cooking oils, canned goods, spices, beans, rice, sauces, seasonings, and pantry staples.',
+    tags: ['Rice', 'Beans', 'Spices', 'Sauces'],
+  },
+  {
+    title: 'Restaurant Supplies',
+    body: 'Everything your kitchen uses every day.',
+    tags: ['Gloves', 'Chemicals', 'Foil', 'Janitorial'],
   },
 ]
 
@@ -53,9 +69,21 @@ const CUSTOMERS = [
   { title: 'Processors',   icon: '🏭', body: 'Food manufacturing and processing facilities that require consistent raw ingredient delivery.' },
 ]
 
-const CATEGORIES = [
-  'Fresh Fruits', 'Fresh Vegetables', 'Seasonal Produce', 'Herbs & Garnish',
-  'Root Vegetables', 'Leafy Greens', 'Bakery & Bread', 'Specialty Items',
+const BRANDS = [
+  { name: 'Eastside Meats',        logo: logoEastsideMeats },
+  { name: 'Darigold',              logo: logoDarigold },
+  { name: 'IBP',                   logo: null },
+  { name: 'Alpine',                logo: logoAlpine },
+  { name: 'Dairy Fresh Northwest', logo: logoDairyFreshNW },
+  { name: 'Coca-Cola',             logo: logoCocaCola },
+  { name: 'Riceland',              logo: logoRiceland },
+  { name: 'Olé Mexican Foods',     logo: logoOleMexicanFoods },
+  { name: 'Embasa',                logo: logoEmbasa },
+  { name: 'Viva',                  logo: null },
+  { name: 'La Morenita',           logo: null },
+  { name: 'Productos Real',        logo: logoProductosReal },
+  { name: 'Aguas Frescas De Mexico', logo: logoAguasFrescas },
+  { name: 'Primaterra',            logo: null },
 ]
 
 export default function ServicesPage() {
@@ -76,15 +104,15 @@ export default function ServicesPage() {
       <section className="services-section">
         <div className="services-inner">
           <p className="svc-overline">What We Offer</p>
-          <h2 className="svc-heading">What We Distribute</h2>
+          <h2 className="svc-heading">Everything Your Restaurant Needs. Delivered.</h2>
           <p className="svc-sub">
-            From fresh produce to bakery products — we handle food distribution
-            so you can focus on running your business.
+            One truck. One invoice. Thousands of products. From fresh produce and dairy to restaurant supplies and custom packaging, we deliver everything your business needs.
           </p>
           <div className="svc-grid">
             {SERVICES.map(s => (
               <div key={s.title} className="svc-card">
                 <h3 className="svc-card-title">{s.title}</h3>
+                {'subtitle' in s && s.subtitle && <p className="svc-card-subtitle">{s.subtitle}</p>}
                 <p className="svc-card-body">{s.body}</p>
                 <div className="svc-tags">
                   {s.tags.map(t => <span key={t} className="svc-tag">{t}</span>)}
@@ -99,13 +127,13 @@ export default function ServicesPage() {
       <section className="services-section services-section--tinted">
         <div className="services-inner restogo-partner">
           <div className="restogo-partner-text">
-            <p className="svc-overline">Also From Us</p>
-            <h2 className="svc-heading">Need Disposable Supplies?</h2>
+            <p className="svc-overline">Also From Ray's Produce</p>
+            <h2 className="svc-heading">Restaurant Supplies & Disposables</h2>
             <p className="svc-body">
-              Ray's Produce is affiliated with Restogo — a warehouse supplier specializing in
-              custom disposable supplies for restaurants and food service operations. From branded
-              cups and to-go containers to napkins and silverware, Restogo has everything your
-              operation needs.
+              Complete your order with the restaurant essentials you use every day. From
+              cups and containers to gloves, foil, bags, napkins, and cleaning supplies, we
+              help keep your operation fully stocked with dependable products delivered
+              alongside your food order.
             </p>
             <a href="https://restogo.com" target="_blank" rel="noopener noreferrer" className="svc-cta-btn">
               Visit Restogo.com →
@@ -117,22 +145,23 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── Product Categories ── */}
+      {/* ── Featured Brands ── */}
       <section className="services-section services-section--tinted">
         <div className="services-inner">
-          <p className="svc-overline">Product Range</p>
-          <h2 className="svc-heading">Our Product Categories</h2>
+          <p className="svc-overline">Featured Brands</p>
+          <h2 className="svc-heading">Trusted Brands. Quality Products.</h2>
           <p className="svc-sub">
-            Product photos and full catalog coming soon. Contact us for
-            a complete list of available items.
+            Ray's Produce proudly partners with many of the foodservice industry's leading
+            manufacturers to provide dependable products, consistent quality, and competitive
+            pricing for restaurants throughout Oregon and Washington.
           </p>
-          <div className="category-grid">
-            {CATEGORIES.map(cat => (
-              <div key={cat} className="category-card">
-                <div className="category-image" aria-label={`${cat} — photo coming soon`}>
-                  <span className="img-placeholder-sm">Photo Coming Soon</span>
-                </div>
-                <p className="category-label">{cat}</p>
+          <div className="brands-grid">
+            {BRANDS.map(brand => (
+              <div key={brand.name} className="brand-card">
+                {brand.logo
+                  ? <img src={brand.logo} alt={brand.name} className="brand-logo" />
+                  : <span className="brand-name">{brand.name}</span>
+                }
               </div>
             ))}
           </div>
@@ -177,29 +206,26 @@ export default function ServicesPage() {
       <section className="services-section">
         <div className="services-inner pricing-block">
           <div>
-            <p className="svc-overline">Pricing</p>
-            <h2 className="svc-heading">Competitive Pricing, Lasting Value</h2>
+            <p className="svc-overline">Partnership</p>
+            <h2 className="svc-heading">More Than Competitive Pricing</h2>
             <p className="svc-body">
-              We offer competitive market pricing backed by long-term partnership rates
-              for established accounts. We believe in transparent pricing and building
-              relationships where both sides win.
-            </p>
-            <p className="svc-body">
-              Every business is different. Contact us for a custom quote tailored to
-              your order volume, delivery frequency, and product mix.
+              At Ray's Produce, we believe great service creates lasting partnerships.
+              Our team works closely with every customer to provide dependable
+              deliveries, quality products, and pricing that supports long-term success.
+              Whether you operate a single restaurant or multiple locations, we'll help
+              you find the right products at the right value.
             </p>
             <Link to="/contact" className="svc-cta-btn">Request a Custom Quote →</Link>
           </div>
           <div className="pricing-callout">
-            <p className="pricing-callout-label">Our Promise</p>
-            <p className="pricing-callout-text">
-              "Competitive prices and lasting partnerships — that's Ray's Produce promise."
-            </p>
+            <p className="pricing-callout-label">Our Commitment</p>
             <ul className="pricing-list">
-              <li>No hidden fees</li>
-              <li>Flexible order minimums</li>
-              <li>Volume pricing available</li>
-              <li>Long-term account rates</li>
+              <li>Competitive Market Pricing</li>
+              <li>No Hidden Fees</li>
+              <li>Flexible Ordering</li>
+              <li>Reliable Product Availability</li>
+              <li>Dedicated Customer Support</li>
+              <li>Long-Term Business Partnerships</li>
             </ul>
           </div>
         </div>

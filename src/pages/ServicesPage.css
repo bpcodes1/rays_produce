@@ -64,6 +64,15 @@
   margin-bottom: 10px;
 }
 
+.svc-card-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5a8c2a;
+  margin-bottom: 10px;
+}
+
 .svc-card-body {
   font-size: 14px;
   color: #4a5a40;
@@ -89,41 +98,38 @@
   border-radius: 2px;
 }
 
-/* ── Product categories ── */
-.category-grid {
+/* ── Featured brands ── */
+.brands-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
 }
 
-.category-card {
+.brand-card {
+  background-color: #ffffff;
   border: 1px solid #c8d8bc;
   border-radius: 4px;
-  overflow: hidden;
-  background-color: #ffffff;
-}
-
-.category-image {
-  aspect-ratio: 4 / 3;
-  background-color: #d8e8cc;
+  padding: 18px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  min-height: 64px;
 }
 
-.img-placeholder-sm {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #82b56a;
-}
-
-.category-label {
-  padding: 10px 12px;
+.brand-name {
   font-size: 14px;
   font-weight: 600;
-  color: #2d5015;
+  color: #1a3d0e;
+  line-height: 1.3;
+}
+
+.brand-logo {
+  max-width: 120px;
+  max-height: 52px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* ── How it works ── */
