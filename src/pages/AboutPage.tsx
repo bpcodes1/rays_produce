@@ -21,18 +21,12 @@ const VALUES = [
 const TIMELINE = [
   { year: '1990s', label: 'The Beginning', body: 'Ray Sosa starts selling strawberries out of the back of a truck, then works at a local farm produce store learning the business firsthand.' },
   { year: 'Newberg', label: 'First Produce Stand', body: 'Ray and his wife open a small neighborhood produce stand in Newberg, Oregon, serving the local Hispanic community and nearby restaurants.' },
-  { year: '2006', label: 'First Warehouse', body: 'Ray\'s Produce moves into its first official warehouse in Tualatin, Oregon, marking the transition into a dedicated distribution operation.' },
-  { year: '2013', label: 'Sherwood Expansion', body: 'The company expands into a 12,000 square foot warehouse in Sherwood, Oregon to keep up with growing customer demand.' },
+  { year: '2006', label: 'First Warehouse', body: 'Ray\'s Produce moves into its first official warehouse in Sherwood, Oregon, marking the transition into a dedicated distribution operation.' },
+  { year: '2013', label: 'Tualatin Expansion', body: 'The company expands into a 12,000 square foot warehouse in Tualatin, Oregon to keep up with growing customer demand.' },
   { year: '2016', label: 'Salem Facility', body: 'Ray\'s Produce purchases a 40,000 square foot warehouse in Salem, Oregon, establishing its home base in the heart of the Willamette Valley.' },
   { year: 'Today', label: '150,000 Sq Ft', body: 'Operating from a company-owned 150,000 square foot distribution center in Salem, Oregon — one of the region\'s largest independent foodservice facilities.' },
 ]
 
-const TEAM_PLACEHOLDERS = [
-  { name: 'Team Member', role: 'Role Coming Soon' },
-  { name: 'Team Member', role: 'Role Coming Soon' },
-  { name: 'Team Member', role: 'Role Coming Soon' },
-  { name: 'Team Member', role: 'Role Coming Soon' },
-]
 
 export default function AboutPage() {
   return (
@@ -218,28 +212,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Team ── */}
-      <section className="about-section">
-        <div className="about-section-inner">
-          <p className="about-overline">The People Behind Ray's</p>
-          <h2 className="about-heading">Meet Our Team</h2>
-          <p className="about-body" style={{ maxWidth: 520 }}>
-            Team photos and bios coming soon. We're proud of the people who make
-            Ray's Produce run every day.
-          </p>
-          <div className="team-grid">
-            {TEAM_PLACEHOLDERS.map((member, i) => (
-              <div key={i} className="team-card">
-                <div className="team-photo-placeholder" aria-label="Team member photo coming soon" />
-                <p className="team-name">{member.name}</p>
-                <p className="team-role">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ── */}
+{/* ── CTA ── */}
       <section className="about-cta">
         <div className="about-cta-inner">
           <h2>Partner With a Team That Cares About Your Business</h2>

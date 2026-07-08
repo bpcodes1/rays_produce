@@ -61,7 +61,7 @@ export default function ContactPage() {
 
           {/* Form */}
           <div className="contact-form-col">
-            <h2 className="contact-col-heading">Request a Quote</h2>
+            <h2 className="contact-col-heading">Become a Customer</h2>
             {submitted ? (
               <div className="form-success">
                 <p className="form-success-title">Thank you!</p>
@@ -124,7 +124,7 @@ export default function ContactPage() {
                   <label htmlFor="message">Message / Special Requests</label>
                   <textarea id="message" name="message" rows={4} value={form.message} onChange={handleChange} placeholder="Tell us about your business and what you're looking for…" />
                 </div>
-                <button type="submit" className="form-submit">Request a Quote →</button>
+                <button type="submit" className="form-submit">Start My Account →</button>
               </form>
             )}
           </div>
@@ -138,29 +138,24 @@ export default function ContactPage() {
 
               <p className="detail-label">Address</p>
               <address className="detail-value detail-address">
-                <strong>Salem</strong><br />
-                3011 Silverton Rd NE<br />
-                Salem, OR 97301<br />
-                <br />
-                <strong>Newberg</strong><br />
-                205 N Main St<br />
-                Newberg, OR 97132
+                4004 Fairview Industrial Dr SE<br />
+                Salem, OR 97302
               </address>
 
-              <p className="detail-label">Business Hours</p>
+              <p className="detail-label">Office Hours</p>
               <div className="detail-value detail-hours">
-                <p><strong>Wholesale Office</strong><br />Mon–Fri: 8:00 AM – 4:00 PM</p>
-                <p><strong>Salem Public Store</strong><br />Tue–Sun: 8:00 AM – 8:00 PM</p>
+                <p>8:00 AM – 5:00 PM</p>
+              </div>
+
+              <p className="detail-label">Will Call Hours</p>
+              <div className="detail-value detail-hours">
+                <p>8:00 AM – 4:00 PM</p>
               </div>
 
               <p className="detail-label">Email</p>
-              <p className="detail-value detail-placeholder">Email coming soon</p>
+              <a href="mailto:info@raysproduce.com" className="detail-value">info@raysproduce.com</a>
             </div>
 
-            <div className="contact-note">
-              <p className="contact-note-label">★ Headquarters</p>
-              <p>Salem, Oregon — family owned and operated since 1996.</p>
-            </div>
           </aside>
         </div>
       </section>

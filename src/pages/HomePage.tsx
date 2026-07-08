@@ -201,33 +201,14 @@ export default function HomePage() {
               <div className="location-info">
                 <span className="location-badge">Location</span>
                 <h3 className="location-name">Ray's Produce Newberg</h3>
-                <p className="location-type">Retail &amp; Local Delivery</p>
+                <p className="location-type">Retail Store</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Testimonials ── */}
-      <section className="home-section" id="testimonials">
-        <div className="home-section-inner">
-          <p className="section-overline">What Our Clients Say</p>
-          <h2 className="section-title">Trusted by Pacific Northwest Businesses</h2>
-          <div className="testimonial-grid">
-            {[1, 2, 3].map(n => (
-              <div key={n} className="testimonial-card">
-                <p className="testimonial-stars" aria-label="5 stars">★★★★★</p>
-                <p className="testimonial-quote">
-                  "Testimonial coming soon — client feedback will be added here."
-                </p>
-                <p className="testimonial-author">— Business Name, City, OR</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA Banner ── */}
+{/* ── CTA Banner ── */}
       <section className="cta-banner" id="quote">
         <div className="cta-banner-inner">
           <h2 className="cta-banner-title">Ready to Elevate Your Business?</h2>
