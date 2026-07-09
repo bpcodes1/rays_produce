@@ -9,7 +9,7 @@ interface SEOProps {
 
 const SITE_NAME = "Ray's Produce Inc."
 const BASE_URL  = 'https://raysproduce.com'
-const DEFAULT_OG = `${BASE_URL}/og-image.jpg`
+const DEFAULT_OG = `${BASE_URL}/og-image.png`
 
 export default function SEO({ title, description, canonical, ogImage = DEFAULT_OG }: SEOProps) {
   const fullUrl   = `${BASE_URL}${canonical}`
