@@ -1,0 +1,341 @@
+/* ── Section wrapper ── */
+.service-map-section {
+  padding: 80px 40px;
+  background-color: #f5f7f2;
+}
+
+/* ── Optional section heading ── */
+.map-section-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.map-section-title {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  color: #1a3d0e;
+  letter-spacing: -0.02em;
+}
+
+/* ── Two-column grid ── */
+.areas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .areas {
+    grid-template-columns: 7fr 5fr;
+    gap: 64px;
+    align-items: center;
+  }
+}
+
+/* ── Map card ── */
+.map-card {
+  aspect-ratio: 5 / 4;
+  border: 1px solid #c8d8bc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.map-card svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Right column ── */
+.areas-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Area accordion ── */
+.area-groups {
+  border: 1px solid #c8d8bc;
+}
+
+.area-group {
+  border-bottom: 1px solid #c8d8bc;
+}
+
+.area-group:last-child {
+  border-bottom: none;
+}
+
+.area-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #f0f5eb;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: background-color 0.12s ease;
+}
+
+.area-group-header:hover {
+  background-color: #e4eede;
+}
+
+.area-group.is-open .area-group-header {
+  background-color: #d8e8cc;
+}
+
+.area-group-name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2d5015;
+}
+
+.area-hq-star {
+  color: #cc2200;
+  margin-right: 6px;
+  font-size: 11px;
+}
+
+.area-group-chevron {
+  font-size: 12px;
+  color: #5a8c2a;
+}
+
+/* ── Cities inside an area ── */
+.area-group-cities {
+  border-top: 1px solid #c8d8bc;
+}
+
+.area-city {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-bottom: 1px solid #e8f0e4;
+  background-color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: background-color 0.12s ease;
+}
+
+.area-city:last-child {
+  border-bottom: none;
+}
+
+.area-city:hover {
+  background-color: #f5f9f2;
+}
+
+.area-city.is-hq {
+  background-color: #eaf4e0;
+}
+
+.area-city.is-hq:hover {
+  background-color: #ddeecf;
+}
+
+.area-city.is-selected {
+  background-color: #1a3d0e;
+}
+
+.area-city.is-selected:hover {
+  background-color: #243f14;
+}
+
+/* ── City text ── */
+.city-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.city-state {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #5a8c2a;
+}
+
+.area-city.is-selected .city-name {
+  color: #e8f4d8;
+}
+
+.area-city.is-selected .city-state {
+  color: #8bb866;
+}
+
+/* ── Services panel ── */
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.city-services-panel {
+  background-color: #1a3d0e;
+  border: 1px solid #2d5420;
+  border-top: none;
+  animation: panel-in 0.18s ease both;
+}
+
+.city-services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #2d5420;
+}
+
+.panel-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: #8bb866;
+}
+
+.panel-close {
+  background: none;
+  border: none;
+  color: #a8c890;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  border-radius: 2px;
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.panel-close:hover {
+  background-color: #2d5420;
+  color: #e8f4d8;
+}
+
+.city-service-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  color: #c8e4b0;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid #2d5420;
+  transition: background-color 0.12s ease;
+}
+
+.city-service-link:last-child {
+  border-bottom: none;
+}
+
+.city-service-link:hover {
+  background-color: #2d5420;
+  color: #e8f4d8;
+}
+
+.link-arrow {
+  color: #8bb866;
+  font-size: 16px;
+}
+
+/* ── Simple sidebar (homepage) ── */
+.simple-area-list {
+  border: 1px solid #c8d8bc;
+  margin-bottom: 0;
+}
+
+.simple-area-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background-color: #f0f5eb;
+  text-decoration: none;
+  border-bottom: 1px solid #c8d8bc;
+  transition: background-color 0.12s ease;
+}
+
+.simple-area-item:last-child {
+  border-bottom: none;
+}
+
+.simple-area-item:hover {
+  background-color: #e4eede;
+}
+
+.simple-area-item--hq {
+  background-color: #eaf4e0;
+}
+
+.simple-area-item--hq:hover {
+  background-color: #ddeecf;
+}
+
+.simple-area-name {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #2d5015;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.simple-area-arrow {
+  color: #5a8c2a;
+  font-size: 16px;
+}
+
+/* ── Bottom callout ── */
+.area-foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  margin-top: 24px;
+  background-color: #eaf0e4;
+  border: 1px solid #c8d8bc;
+  font-size: 14px;
+  color: #4a5a40;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #3d6b1e;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.12s ease;
+}
+
+.cta-button:hover {
+  background-color: #2d5015;
+}

@@ -1,0 +1,505 @@
+================================================================================
+  RAY'S PRODUCE INC. — WEBSITE GAMEPLAN
+  Family-Owned Restaurant Distributor | Salem, Oregon | Est. 1996
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 1 — 4-PAGE WEBSITE STRUCTURE
+────────────────────────────────────────────────────────────────────────────────
+
+PAGE 1 — HOME (index)
+  URL: /
+  Goal: Establish credibility immediately, route visitors to the right page fast.
+
+  Sections:
+  1.  Navbar
+        - Logo (Ray's Produce + star mark)
+        - Links: About, Services, Service Areas, Contact
+        - CTA: "Get a Quote"
+
+  2.  Hero
+        - Headline: "Farm-Fresh Produce, Delivered Across the Northwest"
+        - Subheadline: Family-owned distributor serving OR & WA since 1996
+        - CTAs: [View Service Areas] [Get a Quote →]
+        - Right side: Brand emblem / medallion graphic
+
+  3.  Trust Bar
+        - Horizontal strip of stats/badges (no images needed)
+        - "Since 1996" | "Family Owned" | "Oregon & Washington" | "Daily Deliveries"
+        - "50+ Cities Served"
+
+  4.  Why Ray's (Value Props)
+        - 6 icon cards:
+          * High-Quality Products
+          * Competitive Pricing
+          * Daily Deliveries
+          * Lasting Partnerships
+          * Excellent Customer Service
+          * Community Job Creation
+
+  5.  Who We Serve
+        - 4 tiles: Restaurants | Retailers | Wholesalers | Processors
+        - Brief 1-2 sentence description per tile
+        - Link to Services page
+
+  6.  Service Area Teaser
+        - Headline: "Serving 50+ Cities Across Oregon & Washington"
+        - Small static map or visual + list of major regions
+        - CTA: "See Full Service Area →"
+
+  7.  About Strip (2-column)
+        - Left: Company photo placeholder
+        - Right: Short story — family owned since 1996, Salem OR,
+          locally grown produce, seasonal items, community-first approach
+
+  8.  Testimonials / Social Proof
+        - Placeholder cards for 3 client testimonials
+        - Star ratings, name, business type
+
+  9.  CTA Banner (full-width dark green)
+        - "Ready to elevate your business?"
+        - Subtext: "Competitive prices and lasting partnerships — that's our promise."
+        - Button: "Partner With Us"
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+PAGE 2 — ABOUT (/about)
+  URL: /about
+  Goal: Build trust and human connection. Show this is a real family business.
+
+  Sections:
+  1.  Page Banner
+        - Headline: "Family Owned. Community Driven."
+        - Breadcrumb: Home > About
+        - Background: subtle green texture
+
+  2.  Our Story
+        - Founded 1996, Salem Oregon
+        - Family-owned and operated from day one
+        - Grown from a local produce store to a full-service distributor
+        - Photo placeholder (team / facility / founders)
+
+  3.  Our Mission
+        - "Competitive prices and lasting partnerships — that's Ray's Produce promise."
+        - Emphasis on trust, reliability, exceptional service
+        - 2-3 sentences from company copy
+
+  4.  Core Values (3-column)
+        - Trust | Reliability | Exceptional Service
+        - Icon + short description per value
+
+  5.  What We Specialize In
+        - Locally grown produce
+        - Seasonal items
+        - Fresh daily distribution
+        - Serving the food service industry
+
+  6.  Community Impact
+        - Local job creation
+        - Supporting Oregon & Washington farms
+        - Building lasting business relationships
+        - Reinvesting in the community
+
+  7.  Team Section (placeholder)
+        - Photo grid with names and roles
+        - CLIENT TO PROVIDE: team photos, names, titles
+
+  8.  CTA
+        - "Partner with a team that cares about your business."
+        - Button: "Get a Quote"
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+PAGE 3 — SERVICES (/services)
+  URL: /services
+  Goal: Show the full scope of what they offer and convert interest into a quote.
+
+  Sections:
+  1.  Page Banner
+        - Headline: "What We Offer"
+        - Subheadline: "High-quality food product distribution across the Pacific Northwest"
+        - Breadcrumb: Home > Services
+
+  2.  Services Overview Grid (2-column, large)
+        - Fresh Produce Distribution
+        - Bakery & Bread Products
+        - Wholesale Supply
+        - Retail & Processor Supply
+        - Each card: icon, title, 2-3 sentence description
+
+  3.  Product Categories (visual grid — placeholder for images)
+        - Fruits | Vegetables | Seasonal Items | Bakery | Dry Goods
+        - CLIENT TO PROVIDE: product photos
+
+  4.  How It Works (3-step process)
+        - Step 1: Place Your Order
+        - Step 2: We Pick, Pack & Prepare
+        - Step 3: Daily Delivery to Your Door
+
+  5.  Competitive Pricing Section
+        - Headline: "Fair Prices. Long-Term Partnerships."
+        - Copy from company promise about trust and reliability
+        - CTA: Request a custom quote
+
+  6.  Who We Work With (icon tiles)
+        - Restaurants | Hotels | Retailers | Wholesalers | Processors | Food Service
+        - CLIENT TO PROVIDE: client/partner logos if available
+
+  7.  CTA Banner
+        - "Get a custom quote for your business today."
+        - Button: "Contact Us"
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+PAGE 4 — CONTACT / GET A QUOTE (/contact)
+  URL: /contact
+  Goal: Convert visitors into leads. Make it easy to reach out or request a quote.
+
+  Sections:
+  1.  Page Banner
+        - Headline: "Let's Work Together"
+        - Subheadline: "Fill out the form and we'll get back to you within 1 business day."
+        - Breadcrumb: Home > Contact
+
+  2.  Quote Request Form (left column)
+        Fields:
+        - Business Name *
+        - Contact Name *
+        - Email Address *
+        - Phone Number *
+        - City / Location *
+        - Type of Business (dropdown): Restaurant | Retailer | Wholesaler | Processor | Other
+        - Estimated Weekly Volume (dropdown): Under $500 | $500–$2,000 | $2,000–$5,000 | $5,000+
+        - How did you hear about us? (optional)
+        - Message / Special Requests (textarea)
+        - Submit: "Request a Quote"
+
+  3.  Contact Details (right column)
+        - Phone number (CLIENT TO PROVIDE)
+        - Email address (CLIENT TO PROVIDE)
+        - Address: Salem, Oregon (CLIENT TO PROVIDE full address)
+        - Business hours (CLIENT TO PROVIDE)
+        - Social media links (CLIENT TO PROVIDE)
+
+  4.  Service Area Map (already built)
+        - Full interactive map with area dropdowns
+        - "Confirm your city is in our delivery zone before reaching out"
+
+  5.  FAQ Strip
+        - What is the minimum order?
+        - How often do you deliver?
+        - How do I get started?
+        - Do you deliver on weekends?
+        - What areas do you serve?
+        - CLIENT TO PROVIDE: actual answers
+
+  6.  Google Maps Embed (placeholder)
+        - Embed of Salem HQ location
+        - CLIENT TO PROVIDE: exact address for embed
+
+
+================================================================================
+SECTION 2 — SEO FRAMEWORK GAMEPLAN
+================================================================================
+
+GOAL: Rank for local and industry-specific searches so Ray's Produce
+appears when restaurant owners, retailers, and food service managers
+search for produce distributors in Oregon and Washington.
+
+
+────────────────────────────────────────────────────────────────────────────────
+2A — TARGET KEYWORDS
+────────────────────────────────────────────────────────────────────────────────
+
+  PRIMARY (brand / direct searches):
+    - "Ray's Produce"
+    - "Rays Produce Salem Oregon"
+    - "Ray's Produce Inc Salem OR"
+
+  HIGH-INTENT LOCAL (what customers search before finding a distributor):
+    - "produce distributor Salem Oregon"
+    - "restaurant produce supplier Oregon"
+    - "food distributor Salem OR"
+    - "wholesale produce Oregon"
+    - "local produce delivery Oregon"
+    - "produce distributor Portland Oregon"
+    - "restaurant food supplier Pacific Northwest"
+    - "wholesale food distributor Oregon Washington"
+
+  LONG-TAIL (easier to rank, high conversion):
+    - "daily produce delivery Salem Oregon restaurants"
+    - "local wholesale produce supplier Willamette Valley"
+    - "fresh produce distributor for restaurants Oregon"
+    - "family owned produce distributor Oregon"
+    - "produce delivery service Eugene Oregon"
+    - "restaurant supplier Portland Oregon"
+    - "food service distributor Pacific Northwest"
+
+  SERVICE AREA PAGES (one per region = more ranking opportunities):
+    - "produce distributor Portland Metro Oregon"
+    - "produce delivery Eugene Oregon"
+    - "restaurant supplier Salem Oregon"
+    - "wholesale produce Eastern Washington"
+    - "food distributor Puget Sound Washington"
+
+
+────────────────────────────────────────────────────────────────────────────────
+2B — ON-PAGE SEO (per page)
+────────────────────────────────────────────────────────────────────────────────
+
+  Each page needs:
+    - Unique <title> tag (60 chars max)
+    - Unique <meta name="description"> (150–160 chars)
+    - One H1 per page (includes primary keyword)
+    - H2s for major sections (secondary keywords)
+    - Alt text on all images (descriptive + keyword)
+    - Internal links between pages
+
+  Planned title tags:
+    /           → "Ray's Produce | Fresh Produce Distributor Salem, Oregon"
+    /about      → "About Ray's Produce | Family-Owned Since 1996 | Salem, OR"
+    /services   → "Our Services | Wholesale Produce & Food Distribution | Ray's Produce"
+    /contact    → "Get a Quote | Ray's Produce Distributor Salem, Oregon"
+
+  Planned meta descriptions:
+    /           → "Ray's Produce Inc. is a family-owned produce distributor serving
+                   restaurants, retailers, and wholesalers across Oregon and Washington
+                   since 1996. Daily deliveries. Competitive pricing."
+    /about      → "Learn the story behind Ray's Produce — a family-owned food distributor
+                   in Salem, Oregon dedicated to quality, community, and lasting partnerships
+                   since 1996."
+    /services   → "From fresh produce to bakery products, Ray's Produce offers daily
+                   food distribution for restaurants, retailers, wholesalers, and processors
+                   across the Pacific Northwest."
+    /contact    → "Ready to partner with Ray's Produce? Request a custom quote today.
+                   Serving 50+ cities across Oregon and Washington with daily deliveries."
+
+
+────────────────────────────────────────────────────────────────────────────────
+2C — LOCAL SEO (most important for this business)
+────────────────────────────────────────────────────────────────────────────────
+
+  Google Business Profile (GBP):
+    - Claim and fully complete the GBP listing for Ray's Produce
+    - Category: "Food Products Supplier" + "Produce Wholesaler"
+    - Add all service areas (Salem, Portland, Eugene, Seattle, etc.)
+    - Upload photos: facility, trucks, products, team
+    - Post weekly updates / seasonal specials
+    - Respond to all reviews
+
+  NAP Consistency (Name, Address, Phone):
+    - Use EXACT same business name, address, and phone number everywhere:
+      Website footer | GBP | Yelp | BBB | industry directories
+    - Any inconsistency hurts local rankings
+
+  Local Citations (directories to list on):
+    - Google Business Profile
+    - Yelp for Business
+    - Better Business Bureau (BBB)
+    - Bing Places
+    - Apple Maps
+    - ThomasNet (B2B industrial directory)
+    - FoodServiceDirect or similar food industry directories
+    - Oregon Secretary of State business registry (already likely listed)
+    - Salem Chamber of Commerce directory
+
+  Location-specific content:
+    - Mention "Salem, Oregon" naturally on the homepage
+    - Include city names in service area sections
+    - Create a dedicated /service-areas page with city-level content
+
+
+────────────────────────────────────────────────────────────────────────────────
+2D — TECHNICAL SEO
+────────────────────────────────────────────────────────────────────────────────
+
+  Site structure:
+    - Clean URLs: /about, /services, /service-areas, /contact
+    - No trailing slashes inconsistency
+    - 301 redirects if any old URLs exist
+
+  Performance (Core Web Vitals — Google ranking factor):
+    - Compress all images (WebP format)
+    - Lazy load images below the fold
+    - Minimize render-blocking CSS/JS (Vite handles this well)
+    - Target: Lighthouse score 90+ on mobile
+
+  Mobile-first:
+    - All pages fully responsive (already being built this way)
+    - Touch targets 44px minimum
+    - Font size 16px minimum on mobile
+
+  Files to create:
+    - /public/robots.txt
+        Content: "User-agent: * / Allow: /"
+        Add sitemap URL: "Sitemap: https://raysproduceinc.com/sitemap.xml"
+    - /public/sitemap.xml
+        List all 4 page URLs with <lastmod> dates
+    - /public/favicon.ico + /public/apple-touch-icon.png
+        CLIENT TO PROVIDE: final logo for favicon
+
+  HTTPS:
+    - Ensure SSL certificate is active on hosting (required for SEO)
+    - All URLs serve over https://
+
+
+────────────────────────────────────────────────────────────────────────────────
+2E — STRUCTURED DATA / SCHEMA MARKUP
+────────────────────────────────────────────────────────────────────────────────
+
+  What it does: Tells Google exactly what the business is — can unlock
+  rich results (star ratings, hours, address) in search results.
+
+  Schema types to implement:
+
+  1. LocalBusiness (on every page via <head>)
+     {
+       "@type": "LocalBusiness",
+       "name": "Ray's Produce Inc.",
+       "description": "Family-owned produce distributor serving Oregon and
+                        Washington restaurants, retailers, and wholesalers.",
+       "foundingDate": "1996",
+       "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Salem",
+         "addressRegion": "OR",
+         "addressCountry": "US"
+       },
+       "areaServed": ["Oregon", "Washington"],
+       "telephone": "CLIENT TO PROVIDE",
+       "url": "https://raysproduceinc.com"
+     }
+
+  2. Organization (homepage)
+     - Name, logo, URL, social profiles, founding date
+
+  3. BreadcrumbList (About, Services, Contact pages)
+     - Helps Google understand page hierarchy
+     - Shows breadcrumb trail in search results
+
+  4. FAQPage (Contact page FAQ section)
+     - Each Q&A pair marked up
+     - Can appear as expandable FAQ directly in Google search results
+
+  5. Service (Services page)
+     - Mark up each service offering individually
+
+
+────────────────────────────────────────────────────────────────────────────────
+2F — OPEN GRAPH & SOCIAL META TAGS
+────────────────────────────────────────────────────────────────────────────────
+
+  What it does: Controls how pages look when shared on Facebook,
+  LinkedIn, iMessage, etc. Also used by some search tools.
+
+  Add to <head> on every page:
+    <meta property="og:type"        content="website" />
+    <meta property="og:site_name"   content="Ray's Produce Inc." />
+    <meta property="og:title"       content="[page title]" />
+    <meta property="og:description" content="[page description]" />
+    <meta property="og:url"         content="[full page URL]" />
+    <meta property="og:image"       content="/og-image.jpg" />
+    <meta name="twitter:card"       content="summary_large_image" />
+
+  OG Image:
+    - 1200x630px image (CLIENT TO PROVIDE or create from brand assets)
+    - Shows when someone shares the website link
+    - Should include logo + tagline
+
+
+────────────────────────────────────────────────────────────────────────────────
+2G — CONTENT STRATEGY (ongoing after launch)
+────────────────────────────────────────────────────────────────────────────────
+
+  Blog / News section (future phase):
+    - "What's in Season This Month in Oregon" (targets seasonal produce searches)
+    - "How to Choose a Produce Distributor for Your Restaurant"
+    - "Why Local Sourcing Matters for Pacific Northwest Restaurants"
+    - "5 Reasons to Switch Produce Suppliers in 2025"
+    Each post targets a long-tail keyword and links back to the services page.
+
+  Service area landing pages (future phase):
+    - /service-areas/portland
+    - /service-areas/eugene
+    - /service-areas/seattle
+    - /service-areas/salem
+    Each page: city-specific copy, embedded map, local keyword targeting.
+    This is one of the most effective local SEO strategies for multi-city businesses.
+
+
+────────────────────────────────────────────────────────────────────────────────
+2H — THINGS CLIENT NEEDS TO PROVIDE (Asset Checklist)
+────────────────────────────────────────────────────────────────────────────────
+
+  FOR LAUNCH:
+    [ ] Official business phone number
+    [ ] Official business email address
+    [ ] Full street address (Salem, OR)
+    [ ] Business hours
+    [ ] Google Business Profile login (to add developer access)
+    [ ] High-res logo file (SVG or PNG)
+    [ ] Favicon image (square, min 512x512px)
+    [ ] OG share image (1200x630px)
+
+  FOR CONTENT:
+    [ ] Team photos + names + titles
+    [ ] Facility / warehouse photos
+    [ ] Delivery truck photos
+    [ ] Product photos (produce, packaged goods)
+    [ ] 3-5 client testimonials (name, business type, quote)
+    [ ] Partner / client logos (if willing to display)
+    [ ] Any existing marketing copy or brochures
+
+  FOR SERVICES PAGE:
+    [ ] Full list of product categories they carry
+    [ ] Minimum order information
+    [ ] Delivery schedule / days per region
+    [ ] Pricing structure (or just "contact for quote")
+
+  FOR CONTACT PAGE:
+    [ ] Google Maps embed code for HQ location
+    [ ] FAQ answers (minimum order, delivery days, how to start)
+    [ ] Form submission destination (email address for quote requests)
+
+
+================================================================================
+BUILD ORDER (Recommended)
+================================================================================
+
+  Phase 1 — Skeleton (in progress):
+    [x] Project setup (Vite + React + TypeScript)
+    [x] Navbar
+    [x] Hero section
+    [x] Service area map with city dropdowns
+    [ ] About page layout
+    [ ] Services page layout
+    [ ] Contact page + form
+    [ ] Footer
+
+  Phase 2 — SEO Foundation:
+    [ ] React Router (client-side routing for 4 pages)
+    [ ] Helmet / react-helmet-async (per-page <title> and <meta> tags)
+    [ ] Structured data (JSON-LD) components
+    [ ] robots.txt + sitemap.xml
+    [ ] OG meta tags
+
+  Phase 3 — Content & Polish:
+    [ ] Swap in client photos and real content
+    [ ] Testimonials section
+    [ ] FAQ accordion (Contact page)
+    [ ] Google Maps embed
+    [ ] Favicon + OG image
+    [ ] Google Business Profile setup
+
+  Phase 4 — Launch Prep:
+    [ ] Lighthouse audit (target 90+ performance, 100 SEO)
+    [ ] Image compression (convert to WebP)
+    [ ] Test on mobile devices
+    [ ] Submit sitemap to Google Search Console
+    [ ] Verify Google Business Profile listing
+
+================================================================================
