@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import PageBanner from '../components/PageBanner'
+import globeIcon from '../assets/icons/globe.png'
 import './AboutPage.css'
 
 const VALUES = [
@@ -197,7 +198,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="culture-callout">
-            <p className="culture-callout-flag">🌎</p>
+            <img src={globeIcon} alt="" className="culture-callout-flag" />
             <h3 className="culture-callout-title">Se Habla Español</h3>
             <p className="culture-callout-body">
               Nuestro equipo habla español con fluidez. Estamos aquí para servirle

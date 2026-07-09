@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroImage from '../Rays-produce.png'
+import heroImage from '../assets/photos/Rays-produce.webp'
 import './Hero.css'
 
 export default function Hero() {

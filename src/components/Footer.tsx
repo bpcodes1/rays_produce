@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
-import logo from '../rays_produce_logo.png'
-import restogoLogo from '../restogo_logo.png'
-import restogoTransparent from '../restogo_transparent.png'
+import logo from '../assets/logos/rays_produce_logo.webp'
+import restogoTransparent from '../assets/logos/restogo_transparent.webp'
 import './Footer.css'
 
 export default function Footer() {

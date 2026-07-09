@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import PageBanner from '../components/PageBanner'
-import restogoLogo from '../restogo_logo.png'
-import restogoTransparent from '../restogo_transparent.png'
+import restogoTransparent from '../assets/logos/restogo_transparent.webp'
 import logoEastsideMeats from '../assets/brands/eastside_meats.png'
 import logoDarigold from '../assets/brands/dairygold.webp'
-import logoAlpine from '../assets/brands/alpine.avif'
+import logoAlpine from '../assets/brands/alpine.png'
 import logoDairyFreshNW from '../assets/brands/dairy_fresh_northwest.webp'
 import logoCocaCola from '../assets/brands/coca_cola.png'
 import logoRiceland from '../assets/brands/riceland.svg'
@@ -13,6 +12,10 @@ import logoOleMexicanFoods from '../assets/brands/ole_mexican_foods.webp'
 import logoEmbasa from '../assets/brands/embasa.png'
 import logoProductosReal from '../assets/brands/productos_real.png'
 import logoAguasFrescas from '../assets/brands/aguas_frescas_de_mexico.png'
+import logoIBP from '../assets/brands/ibp.png'
+import logoViva from '../assets/brands/viva.png'
+import logoLaMorenita from '../assets/brands/la_morenita.webp'
+import logoPrimaterra from '../assets/brands/primaterra.webp'
 import './ServicesPage.css'
 
 const SERVICES = [
@@ -104,18 +107,18 @@ const CUSTOMERS = [
 const BRANDS = [
   { name: 'Eastside Meats',        logo: logoEastsideMeats },
   { name: 'Darigold',              logo: logoDarigold },
-  { name: 'IBP',                   logo: null },
+  { name: 'IBP',                   logo: logoIBP },
   { name: 'Alpine',                logo: logoAlpine },
   { name: 'Dairy Fresh Northwest', logo: logoDairyFreshNW },
   { name: 'Coca-Cola',             logo: logoCocaCola },
   { name: 'Riceland',              logo: logoRiceland },
   { name: 'Olé Mexican Foods',     logo: logoOleMexicanFoods },
   { name: 'Embasa',                logo: logoEmbasa },
-  { name: 'Viva',                  logo: null },
-  { name: 'La Morenita',           logo: null },
+  { name: 'Viva',                  logo: logoViva },
+  { name: 'La Morenita',           logo: logoLaMorenita },
   { name: 'Productos Real',        logo: logoProductosReal },
   { name: 'Aguas Frescas De Mexico', logo: logoAguasFrescas },
-  { name: 'Primaterra',            logo: null },
+  { name: 'Primaterra',            logo: logoPrimaterra },
 ]
 
 export default function ServicesPage() {

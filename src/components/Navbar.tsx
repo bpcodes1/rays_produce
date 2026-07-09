@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
-import logo from '../logo_text_transparent.png'
+import logo from '../assets/logos/logo_text_transparent.webp'
 import './Navbar.css'
 
 const NAV_LINKS = [

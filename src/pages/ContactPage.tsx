@@ -28,18 +28,69 @@ const INITIAL: FormData = {
 }
 
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function validate(form: FormData): string | null {
+  if (!form.businessName.trim()) return 'Please enter your business name.'
+  if (!form.contactName.trim()) return 'Please enter your contact name.'
+  if (!EMAIL_PATTERN.test(form.email.trim())) return 'Please enter a valid email address.'
+  if (!form.phone.trim()) return 'Please enter a phone number.'
+  if (!form.city.trim()) return 'Please enter your city.'
+  if (!form.businessType) return 'Please select a business type.'
+  return null
+}
+
 export default function ContactPage() {
   const [form, setForm]       = useState<FormData>(INITIAL)
+  const [botcheck, setBotcheck] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError]     = useState<string | null>(null)
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    // TODO: wire up to backend / email service (e.g. Formspree, Netlify Forms)
-    setSubmitted(true)
+
+    // Honeypot: real visitors never fill this field. Bots that autofill every
+    // field do, so silently drop the submission without hitting the API.
+    if (botcheck) {
+      setSubmitted(true)
+      return
+    }
+
+    const validationError = validate(form)
+    if (validationError) {
+      setError(validationError)
+      return
+    }
+
+    setSubmitting(true)
+    setError(null)
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: `New quote request from ${form.businessName || form.contactName}`,
+          ...form,
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSubmitted(true)
+      } else {
+        setError('Something went wrong sending your request. Please try again or call us directly.')
+      }
+    } catch {
+      setError('Something went wrong sending your request. Please try again or call us directly.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -69,29 +120,34 @@ export default function ContactPage() {
               </div>
             ) : (
               <form className="contact-form" onSubmit={handleSubmit} noValidate>
+                {/* Honeypot — hidden from real visitors, catches bots that fill every field */}
+                <div className="form-honeypot" aria-hidden="true">
+                  <label htmlFor="botcheck">Leave this field blank</label>
+                  <input id="botcheck" name="botcheck" type="text" tabIndex={-1} autoComplete="off" value={botcheck} onChange={e => setBotcheck(e.target.value)} />
+                </div>
                 <div className="form-row">
                   <div className="form-field">
                     <label htmlFor="businessName">Business Name <span aria-hidden="true">*</span></label>
-                    <input id="businessName" name="businessName" type="text" required value={form.businessName} onChange={handleChange} placeholder="Your Restaurant or Business" />
+                    <input id="businessName" name="businessName" type="text" required maxLength={100} value={form.businessName} onChange={handleChange} placeholder="Your Restaurant or Business" />
                   </div>
                   <div className="form-field">
                     <label htmlFor="contactName">Contact Name <span aria-hidden="true">*</span></label>
-                    <input id="contactName" name="contactName" type="text" required value={form.contactName} onChange={handleChange} placeholder="First & Last Name" />
+                    <input id="contactName" name="contactName" type="text" required maxLength={100} value={form.contactName} onChange={handleChange} placeholder="First & Last Name" />
                   </div>
                 </div>
                 <div className="form-row">
                   <div className="form-field">
                     <label htmlFor="email">Email Address <span aria-hidden="true">*</span></label>
-                    <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} placeholder="you@business.com" />
+                    <input id="email" name="email" type="email" required maxLength={254} value={form.email} onChange={handleChange} placeholder="you@business.com" />
                   </div>
                   <div className="form-field">
                     <label htmlFor="phone">Phone Number <span aria-hidden="true">*</span></label>
-                    <input id="phone" name="phone" type="tel" required value={form.phone} onChange={handleChange} placeholder="(503) 000-0000" />
+                    <input id="phone" name="phone" type="tel" required maxLength={20} value={form.phone} onChange={handleChange} placeholder="(503) 000-0000" />
                   </div>
                 </div>
                 <div className="form-field">
                   <label htmlFor="city">City / Location <span aria-hidden="true">*</span></label>
-                  <input id="city" name="city" type="text" required value={form.city} onChange={handleChange} placeholder="Salem, OR" />
+                  <input id="city" name="city" type="text" required maxLength={100} value={form.city} onChange={handleChange} placeholder="Salem, OR" />
                 </div>
                 <div className="form-row">
                   <div className="form-field">
@@ -118,13 +174,16 @@ export default function ContactPage() {
                 </div>
                 <div className="form-field">
                   <label htmlFor="heardAbout">How Did You Hear About Us?</label>
-                  <input id="heardAbout" name="heardAbout" type="text" value={form.heardAbout} onChange={handleChange} placeholder="Google, referral, etc." />
+                  <input id="heardAbout" name="heardAbout" type="text" maxLength={200} value={form.heardAbout} onChange={handleChange} placeholder="Google, referral, etc." />
                 </div>
                 <div className="form-field">
                   <label htmlFor="message">Message / Special Requests</label>
-                  <textarea id="message" name="message" rows={4} value={form.message} onChange={handleChange} placeholder="Tell us about your business and what you're looking for…" />
+                  <textarea id="message" name="message" rows={4} maxLength={2000} value={form.message} onChange={handleChange} placeholder="Tell us about your business and what you're looking for…" />
                 </div>
-                <button type="submit" className="form-submit">Start My Account →</button>
+                {error && <p className="form-error">{error}</p>}
+                <button type="submit" className="form-submit" disabled={submitting}>
+                  {submitting ? 'Sending…' : 'Start My Account →'}
+                </button>
               </form>
             )}
           </div>

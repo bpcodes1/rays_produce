@@ -1,4 +1,4 @@
-import heroBg from '../hero3.jpg'
+import heroBg from '../assets/photos/hero3.webp'
 import './PageBanner.css'
 
 interface PageBannerProps {

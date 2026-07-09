@@ -2,6 +2,14 @@
   padding: 88px 40px;
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-section--tinted {
   background-color: #eaf0e4;
 }
@@ -118,6 +126,17 @@
 
 .form-submit:hover {
   background-color: #2d5015;
+}
+
+.form-submit:disabled {
+  background-color: #8fa87e;
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: #b3261e;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .form-success {
