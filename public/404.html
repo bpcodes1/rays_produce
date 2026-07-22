@@ -2,10 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Page Not Found — Ray's Produce Inc.</title>
+    <title>Ray's Produce Inc.</title>
     <meta name="robots" content="noindex" />
+    <script>
+      // SPA fallback: a hard refresh on a client-side route (e.g. /about) lands
+      // here because no static file exists at that path. Preserve the requested
+      // path in the query string and bounce to index.html, where the snippet in
+      // index.html restores the real URL before React Router boots.
+      (function () {
+        var l = window.location;
+        var path = l.pathname + l.search;
+        l.replace(l.origin + '/?redirect=' + encodeURIComponent(path) + l.hash);
+      })();
+    </script>
   </head>
   <body>
-    <p>Page not found. <a href="/">Return home</a>.</p>
+    <p>Redirecting… <a href="/">Return home</a>.</p>
   </body>
 </html>

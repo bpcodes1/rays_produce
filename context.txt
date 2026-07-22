@@ -1,0 +1,87 @@
+RAY'S PRODUCE INC. — WEBSITE PROJECT CONTEXT
+For internal reference when scoping/pricing future proposals for this client.
+
+===============================================================================
+PRICE CHARGED: $3,800
+===============================================================================
+
+CLIENT
+------
+Ray's Produce Inc. — family-owned wholesale food distributor (fresh produce,
+dairy/meat/refrigerated, frozen foods, dry goods, restaurant supplies) serving
+restaurants, retailers, wholesalers, and processors across Oregon & Washington.
+Operating since 1996, ~2,000 customers, 100+ employees, 150,000 sq ft Salem, OR
+distribution center. Also owns a sister brand, Restogo (private-label
+packaging/disposables import division), cross-promoted on the site.
+
+TECH STACK
+----------
+- React + TypeScript, built with Vite
+- React Router (client-side routing, 5 pages)
+- react-helmet-async for per-page SEO meta tags
+- Static JSON-LD schema markup (LocalBusiness/Organization)
+- No backend/CMS — fully static site, content is hardcoded in components
+- Hosting: Cloudflare Pages (migrated from GitHub Pages), deployed from `main`
+- Contact form: Web3Forms (client-side email delivery, no backend)
+
+WHAT WAS DELIVERED
+-------------------
+Pages (5): Home, About, Services, Contact, Service Areas
+
+- Home: hero section, service category overview, "how it works" steps,
+  customer-type breakdown (restaurants/retailers/wholesalers/processors),
+  Restogo cross-promotion
+- About: company history/timeline (1990s founding through today), core values,
+  bilingual/culture section, CTA
+- Services: full service category breakdown, Restogo partner callout,
+  featured brands grid (14 partner brand logos), "how it works", pricing
+  philosophy blurb, CTA
+- Contact: full lead-gen quote request form (business name, contact info,
+  business type, estimated volume, message) wired to Web3Forms with:
+    - client-side validation
+    - honeypot spam field
+    - field length limits
+  Plus static contact details (phone, address, hours) and social links
+- Service Areas: interactive map component (react-simple-maps) showing
+  OR/WA coverage, region/city breakdown by area, FAQ section
+
+Cross-cutting:
+- Per-page SEO (title/description/canonical/OG/Twitter card tags)
+- JSON-LD structured data for local business SEO
+- robots.txt + sitemap.xml
+- Custom favicon + social share preview image (og:image)
+- Responsive design across all pages
+- Brand asset library: 14 partner/vendor logos in Services page
+- Image asset pipeline: converted large source images to WebP, organized
+  into src/assets/{logos,icons,photos,brands}/
+- Cloudflare Pages deployment config (_redirects for SPA routing, env-based
+  build secrets for the Web3Forms key)
+
+WHAT WAS NOT INCLUDED (relevant for scoping "more features" proposal)
+-----------------------------------------------------------------------
+- No CMS / no way for the client to edit content without a developer
+- No user accounts, login, or customer portal
+- No e-commerce / online ordering / cart / payment processing
+- No order history, saved preferences, or account-based reordering
+- No admin dashboard of any kind
+- No database — all content is static, hardcoded in React components
+- No blog/news section
+- No image gallery / UGC features
+- No multi-language toggle (site is English-only; "Se Habla Español" is a
+  single static callout, not a full i18n implementation)
+- No analytics/tracking integration set up
+- Contact form is email-only (Web3Forms) — no CRM integration, no lead
+  database, submissions aren't stored anywhere queryable
+
+NOTES FOR PRICING A FOLLOW-UP PROPOSAL
+-----------------------------------------
+$3,800 covered: a 5-page fully custom static marketing/lead-gen site, no CMS,
+no backend, no e-commerce, using a modern framework (React/Vite/TS) rather
+than a page builder or template platform. That price point reflects a
+content-only static build with one integrated third-party form service.
+
+Anything that requires persistent server-side state — a CMS, user accounts,
+order/e-commerce functionality, an admin panel, a database, payment
+processing, or a CRM-connected lead pipeline — is a materially different
+scope than what $3,800 covered here, and should be priced as new
+functionality on top of this baseline, not as a minor add-on.
